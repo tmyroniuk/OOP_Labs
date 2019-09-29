@@ -84,22 +84,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Projects/OOP_Labs/Lab1/CList.cpp">
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/CList/CList.cpp">
 			<Option target="Lab1"/>
 		</Unit>
-		<Unit filename="C:/Projects/OOP_Labs/Lab1/CList.h">
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/CList/CList.h">
 			<Option target="Lab1"/>
 		</Unit>
-		<Unit filename="C:/Projects/OOP_Labs/Lab1/List.cpp">
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/CList/List/Iterator.cpp">
 			<Option target="Lab1"/>
 		</Unit>
-		<Unit filename="C:/Projects/OOP_Labs/Lab1/List.h">
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/CList/List/Iterator.h">
 			<Option target="Lab1"/>
 		</Unit>
-		<Unit filename="C:/Projects/OOP_Labs/Lab1/ListNode.cpp">
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/CList/List/List.cpp">
 			<Option target="Lab1"/>
 		</Unit>
-		<Unit filename="C:/Projects/OOP_Labs/Lab1/ListNode.h">
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/CList/List/List.h">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/CList/List/Node.cpp">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/CList/List/Node.h">
 			<Option target="Lab1"/>
 		</Unit>
 		<Unit filename="C:/Projects/OOP_Labs/Lab1/Vector.cpp">

@@ -1,13 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Lab1.dir/main.cpp.obj"
-  "CMakeFiles/Lab1.dir/CList.cpp.obj"
-  "CMakeFiles/Lab1.dir/ListNode.cpp.obj"
-  "CMakeFiles/Lab1.dir/List.cpp.obj"
+  "CMakeFiles/Lab1.dir/CList/CList.cpp.obj"
+  "CMakeFiles/Lab1.dir/CList/List/Iterator.cpp.obj"
+  "CMakeFiles/Lab1.dir/CList/List/List.cpp.obj"
+  "CMakeFiles/Lab1.dir/CList/List/Node.cpp.obj"
   "CMakeFiles/Lab1.dir/Vector.cpp.obj"
-  "Lab1.pdb"
+  "CMakeFiles/Lab1.dir/main.cpp.obj"
   "Lab1.exe"
   "Lab1.exe.manifest"
   "Lab1.lib"
+  "Lab1.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
