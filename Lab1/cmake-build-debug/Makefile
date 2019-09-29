@@ -124,6 +124,114 @@ Lab1\fast:
 	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\build
 .PHONY : Lab1\fast
 
+CList.obj: CList.cpp.obj
+
+.PHONY : CList.obj
+
+# target to build an object file
+CList.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList.cpp.obj
+.PHONY : CList.cpp.obj
+
+CList.i: CList.cpp.i
+
+.PHONY : CList.i
+
+# target to preprocess a source file
+CList.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList.cpp.i
+.PHONY : CList.cpp.i
+
+CList.s: CList.cpp.s
+
+.PHONY : CList.s
+
+# target to generate assembly for a file
+CList.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList.cpp.s
+.PHONY : CList.cpp.s
+
+List.obj: List.cpp.obj
+
+.PHONY : List.obj
+
+# target to build an object file
+List.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\List.cpp.obj
+.PHONY : List.cpp.obj
+
+List.i: List.cpp.i
+
+.PHONY : List.i
+
+# target to preprocess a source file
+List.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\List.cpp.i
+.PHONY : List.cpp.i
+
+List.s: List.cpp.s
+
+.PHONY : List.s
+
+# target to generate assembly for a file
+List.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\List.cpp.s
+.PHONY : List.cpp.s
+
+ListNode.obj: ListNode.cpp.obj
+
+.PHONY : ListNode.obj
+
+# target to build an object file
+ListNode.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\ListNode.cpp.obj
+.PHONY : ListNode.cpp.obj
+
+ListNode.i: ListNode.cpp.i
+
+.PHONY : ListNode.i
+
+# target to preprocess a source file
+ListNode.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\ListNode.cpp.i
+.PHONY : ListNode.cpp.i
+
+ListNode.s: ListNode.cpp.s
+
+.PHONY : ListNode.s
+
+# target to generate assembly for a file
+ListNode.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\ListNode.cpp.s
+.PHONY : ListNode.cpp.s
+
+Vector.obj: Vector.cpp.obj
+
+.PHONY : Vector.obj
+
+# target to build an object file
+Vector.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Vector.cpp.obj
+.PHONY : Vector.cpp.obj
+
+Vector.i: Vector.cpp.i
+
+.PHONY : Vector.i
+
+# target to preprocess a source file
+Vector.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Vector.cpp.i
+.PHONY : Vector.cpp.i
+
+Vector.s: Vector.cpp.s
+
+.PHONY : Vector.s
+
+# target to generate assembly for a file
+Vector.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Vector.cpp.s
+.PHONY : Vector.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -160,6 +268,18 @@ help:
 	@echo ... Lab1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... CList.obj
+	@echo ... CList.i
+	@echo ... CList.s
+	@echo ... List.obj
+	@echo ... List.i
+	@echo ... List.s
+	@echo ... ListNode.obj
+	@echo ... ListNode.i
+	@echo ... ListNode.s
+	@echo ... Vector.obj
+	@echo ... Vector.i
+	@echo ... Vector.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

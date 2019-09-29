@@ -77,17 +77,101 @@ CMakeFiles\Lab1.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Lab1.dir\main.cpp.s /c C:\Projects\OOP_Labs\Lab1\main.cpp
 <<
 
+CMakeFiles\Lab1.dir\CList.cpp.obj: CMakeFiles\Lab1.dir\flags.make
+CMakeFiles\Lab1.dir\CList.cpp.obj: ..\CList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Projects\OOP_Labs\Lab1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab1.dir/CList.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Lab1.dir\CList.cpp.obj /FdCMakeFiles\Lab1.dir\ /FS -c C:\Projects\OOP_Labs\Lab1\CList.cpp
+<<
+
+CMakeFiles\Lab1.dir\CList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab1.dir/CList.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe > CMakeFiles\Lab1.dir\CList.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\OOP_Labs\Lab1\CList.cpp
+<<
+
+CMakeFiles\Lab1.dir\CList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab1.dir/CList.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Lab1.dir\CList.cpp.s /c C:\Projects\OOP_Labs\Lab1\CList.cpp
+<<
+
+CMakeFiles\Lab1.dir\ListNode.cpp.obj: CMakeFiles\Lab1.dir\flags.make
+CMakeFiles\Lab1.dir\ListNode.cpp.obj: ..\ListNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Projects\OOP_Labs\Lab1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Lab1.dir/ListNode.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Lab1.dir\ListNode.cpp.obj /FdCMakeFiles\Lab1.dir\ /FS -c C:\Projects\OOP_Labs\Lab1\ListNode.cpp
+<<
+
+CMakeFiles\Lab1.dir\ListNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab1.dir/ListNode.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe > CMakeFiles\Lab1.dir\ListNode.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\OOP_Labs\Lab1\ListNode.cpp
+<<
+
+CMakeFiles\Lab1.dir\ListNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab1.dir/ListNode.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Lab1.dir\ListNode.cpp.s /c C:\Projects\OOP_Labs\Lab1\ListNode.cpp
+<<
+
+CMakeFiles\Lab1.dir\List.cpp.obj: CMakeFiles\Lab1.dir\flags.make
+CMakeFiles\Lab1.dir\List.cpp.obj: ..\List.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Projects\OOP_Labs\Lab1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Lab1.dir/List.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Lab1.dir\List.cpp.obj /FdCMakeFiles\Lab1.dir\ /FS -c C:\Projects\OOP_Labs\Lab1\List.cpp
+<<
+
+CMakeFiles\Lab1.dir\List.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab1.dir/List.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe > CMakeFiles\Lab1.dir\List.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\OOP_Labs\Lab1\List.cpp
+<<
+
+CMakeFiles\Lab1.dir\List.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab1.dir/List.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Lab1.dir\List.cpp.s /c C:\Projects\OOP_Labs\Lab1\List.cpp
+<<
+
+CMakeFiles\Lab1.dir\Vector.cpp.obj: CMakeFiles\Lab1.dir\flags.make
+CMakeFiles\Lab1.dir\Vector.cpp.obj: ..\Vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Projects\OOP_Labs\Lab1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Lab1.dir/Vector.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Lab1.dir\Vector.cpp.obj /FdCMakeFiles\Lab1.dir\ /FS -c C:\Projects\OOP_Labs\Lab1\Vector.cpp
+<<
+
+CMakeFiles\Lab1.dir\Vector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab1.dir/Vector.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe > CMakeFiles\Lab1.dir\Vector.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\OOP_Labs\Lab1\Vector.cpp
+<<
+
+CMakeFiles\Lab1.dir\Vector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab1.dir/Vector.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Lab1.dir\Vector.cpp.s /c C:\Projects\OOP_Labs\Lab1\Vector.cpp
+<<
+
 # Object files for target Lab1
 Lab1_OBJECTS = \
-"CMakeFiles\Lab1.dir\main.cpp.obj"
+"CMakeFiles\Lab1.dir\main.cpp.obj" \
+"CMakeFiles\Lab1.dir\CList.cpp.obj" \
+"CMakeFiles\Lab1.dir\ListNode.cpp.obj" \
+"CMakeFiles\Lab1.dir\List.cpp.obj" \
+"CMakeFiles\Lab1.dir\Vector.cpp.obj"
 
 # External object files for target Lab1
 Lab1_EXTERNAL_OBJECTS =
 
 Lab1.exe: CMakeFiles\Lab1.dir\main.cpp.obj
+Lab1.exe: CMakeFiles\Lab1.dir\CList.cpp.obj
+Lab1.exe: CMakeFiles\Lab1.dir\ListNode.cpp.obj
+Lab1.exe: CMakeFiles\Lab1.dir\List.cpp.obj
+Lab1.exe: CMakeFiles\Lab1.dir\Vector.cpp.obj
 Lab1.exe: CMakeFiles\Lab1.dir\build.make
 Lab1.exe: CMakeFiles\Lab1.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Projects\OOP_Labs\Lab1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Lab1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Projects\OOP_Labs\Lab1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Lab1.exe"
 	"C:\Users\tmyro\AppData\Local\JetBrains\CLion 2019.2.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Lab1.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\Lab1.dir\objects1.rsp @<<
  /out:Lab1.exe /implib:Lab1.lib /pdb:C:\Projects\OOP_Labs\Lab1\cmake-build-debug\Lab1.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
