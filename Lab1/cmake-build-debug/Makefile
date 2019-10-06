@@ -124,114 +124,6 @@ Lab1\fast:
 	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\build
 .PHONY : Lab1\fast
 
-CList\CList.obj: CList\CList.cpp.obj
-
-.PHONY : CList\CList.obj
-
-# target to build an object file
-CList\CList.cpp.obj:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\CList.cpp.obj
-.PHONY : CList\CList.cpp.obj
-
-CList\CList.i: CList\CList.cpp.i
-
-.PHONY : CList\CList.i
-
-# target to preprocess a source file
-CList\CList.cpp.i:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\CList.cpp.i
-.PHONY : CList\CList.cpp.i
-
-CList\CList.s: CList\CList.cpp.s
-
-.PHONY : CList\CList.s
-
-# target to generate assembly for a file
-CList\CList.cpp.s:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\CList.cpp.s
-.PHONY : CList\CList.cpp.s
-
-CList\List\Iterator.obj: CList\List\Iterator.cpp.obj
-
-.PHONY : CList\List\Iterator.obj
-
-# target to build an object file
-CList\List\Iterator.cpp.obj:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\List\Iterator.cpp.obj
-.PHONY : CList\List\Iterator.cpp.obj
-
-CList\List\Iterator.i: CList\List\Iterator.cpp.i
-
-.PHONY : CList\List\Iterator.i
-
-# target to preprocess a source file
-CList\List\Iterator.cpp.i:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\List\Iterator.cpp.i
-.PHONY : CList\List\Iterator.cpp.i
-
-CList\List\Iterator.s: CList\List\Iterator.cpp.s
-
-.PHONY : CList\List\Iterator.s
-
-# target to generate assembly for a file
-CList\List\Iterator.cpp.s:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\List\Iterator.cpp.s
-.PHONY : CList\List\Iterator.cpp.s
-
-CList\List\List.obj: CList\List\List.cpp.obj
-
-.PHONY : CList\List\List.obj
-
-# target to build an object file
-CList\List\List.cpp.obj:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\List\List.cpp.obj
-.PHONY : CList\List\List.cpp.obj
-
-CList\List\List.i: CList\List\List.cpp.i
-
-.PHONY : CList\List\List.i
-
-# target to preprocess a source file
-CList\List\List.cpp.i:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\List\List.cpp.i
-.PHONY : CList\List\List.cpp.i
-
-CList\List\List.s: CList\List\List.cpp.s
-
-.PHONY : CList\List\List.s
-
-# target to generate assembly for a file
-CList\List\List.cpp.s:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\List\List.cpp.s
-.PHONY : CList\List\List.cpp.s
-
-CList\List\Node.obj: CList\List\Node.cpp.obj
-
-.PHONY : CList\List\Node.obj
-
-# target to build an object file
-CList\List\Node.cpp.obj:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\List\Node.cpp.obj
-.PHONY : CList\List\Node.cpp.obj
-
-CList\List\Node.i: CList\List\Node.cpp.i
-
-.PHONY : CList\List\Node.i
-
-# target to preprocess a source file
-CList\List\Node.cpp.i:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\List\Node.cpp.i
-.PHONY : CList\List\Node.cpp.i
-
-CList\List\Node.s: CList\List\Node.cpp.s
-
-.PHONY : CList\List\Node.s
-
-# target to generate assembly for a file
-CList\List\Node.cpp.s:
-	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\CList\List\Node.cpp.s
-.PHONY : CList\List\Node.cpp.s
-
 Vector.obj: Vector.cpp.obj
 
 .PHONY : Vector.obj
@@ -295,18 +187,6 @@ help:
 	@echo ... Lab1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... CList/CList.obj
-	@echo ... CList/CList.i
-	@echo ... CList/CList.s
-	@echo ... CList/List/Iterator.obj
-	@echo ... CList/List/Iterator.i
-	@echo ... CList/List/Iterator.s
-	@echo ... CList/List/List.obj
-	@echo ... CList/List/List.i
-	@echo ... CList/List/List.s
-	@echo ... CList/List/Node.obj
-	@echo ... CList/List/Node.i
-	@echo ... CList/List/Node.s
 	@echo ... Vector.obj
 	@echo ... Vector.i
 	@echo ... Vector.s
