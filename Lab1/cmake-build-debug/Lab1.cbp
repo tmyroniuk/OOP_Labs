@@ -84,6 +84,48 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/Address.cpp">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/Address.h">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/AddressHolder.cpp">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/AddressHolder.h">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/IPv4.cpp">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/IPv4.h">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/IPv4_CIDR.cpp">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/IPv4_CIDR.h">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/IPv6.cpp">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/IPv6.h">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/IPv6_CIDR.cpp">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/IPv6_CIDR.h">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/MAC.cpp">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/Address/MAC.h">
+			<Option target="Lab1"/>
+		</Unit>
 		<Unit filename="C:/Projects/OOP_Labs/Lab1/BaseList/BaseList.h">
 			<Option target="Lab1"/>
 		</Unit>

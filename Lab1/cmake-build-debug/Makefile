@@ -124,6 +124,195 @@ Lab1\fast:
 	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\build
 .PHONY : Lab1\fast
 
+Address\Address.obj: Address\Address.cpp.obj
+
+.PHONY : Address\Address.obj
+
+# target to build an object file
+Address\Address.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\Address.cpp.obj
+.PHONY : Address\Address.cpp.obj
+
+Address\Address.i: Address\Address.cpp.i
+
+.PHONY : Address\Address.i
+
+# target to preprocess a source file
+Address\Address.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\Address.cpp.i
+.PHONY : Address\Address.cpp.i
+
+Address\Address.s: Address\Address.cpp.s
+
+.PHONY : Address\Address.s
+
+# target to generate assembly for a file
+Address\Address.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\Address.cpp.s
+.PHONY : Address\Address.cpp.s
+
+Address\AddressHolder.obj: Address\AddressHolder.cpp.obj
+
+.PHONY : Address\AddressHolder.obj
+
+# target to build an object file
+Address\AddressHolder.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\AddressHolder.cpp.obj
+.PHONY : Address\AddressHolder.cpp.obj
+
+Address\AddressHolder.i: Address\AddressHolder.cpp.i
+
+.PHONY : Address\AddressHolder.i
+
+# target to preprocess a source file
+Address\AddressHolder.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\AddressHolder.cpp.i
+.PHONY : Address\AddressHolder.cpp.i
+
+Address\AddressHolder.s: Address\AddressHolder.cpp.s
+
+.PHONY : Address\AddressHolder.s
+
+# target to generate assembly for a file
+Address\AddressHolder.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\AddressHolder.cpp.s
+.PHONY : Address\AddressHolder.cpp.s
+
+Address\IPv4.obj: Address\IPv4.cpp.obj
+
+.PHONY : Address\IPv4.obj
+
+# target to build an object file
+Address\IPv4.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv4.cpp.obj
+.PHONY : Address\IPv4.cpp.obj
+
+Address\IPv4.i: Address\IPv4.cpp.i
+
+.PHONY : Address\IPv4.i
+
+# target to preprocess a source file
+Address\IPv4.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv4.cpp.i
+.PHONY : Address\IPv4.cpp.i
+
+Address\IPv4.s: Address\IPv4.cpp.s
+
+.PHONY : Address\IPv4.s
+
+# target to generate assembly for a file
+Address\IPv4.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv4.cpp.s
+.PHONY : Address\IPv4.cpp.s
+
+Address\IPv4_CIDR.obj: Address\IPv4_CIDR.cpp.obj
+
+.PHONY : Address\IPv4_CIDR.obj
+
+# target to build an object file
+Address\IPv4_CIDR.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv4_CIDR.cpp.obj
+.PHONY : Address\IPv4_CIDR.cpp.obj
+
+Address\IPv4_CIDR.i: Address\IPv4_CIDR.cpp.i
+
+.PHONY : Address\IPv4_CIDR.i
+
+# target to preprocess a source file
+Address\IPv4_CIDR.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv4_CIDR.cpp.i
+.PHONY : Address\IPv4_CIDR.cpp.i
+
+Address\IPv4_CIDR.s: Address\IPv4_CIDR.cpp.s
+
+.PHONY : Address\IPv4_CIDR.s
+
+# target to generate assembly for a file
+Address\IPv4_CIDR.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv4_CIDR.cpp.s
+.PHONY : Address\IPv4_CIDR.cpp.s
+
+Address\IPv6.obj: Address\IPv6.cpp.obj
+
+.PHONY : Address\IPv6.obj
+
+# target to build an object file
+Address\IPv6.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv6.cpp.obj
+.PHONY : Address\IPv6.cpp.obj
+
+Address\IPv6.i: Address\IPv6.cpp.i
+
+.PHONY : Address\IPv6.i
+
+# target to preprocess a source file
+Address\IPv6.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv6.cpp.i
+.PHONY : Address\IPv6.cpp.i
+
+Address\IPv6.s: Address\IPv6.cpp.s
+
+.PHONY : Address\IPv6.s
+
+# target to generate assembly for a file
+Address\IPv6.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv6.cpp.s
+.PHONY : Address\IPv6.cpp.s
+
+Address\IPv6_CIDR.obj: Address\IPv6_CIDR.cpp.obj
+
+.PHONY : Address\IPv6_CIDR.obj
+
+# target to build an object file
+Address\IPv6_CIDR.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv6_CIDR.cpp.obj
+.PHONY : Address\IPv6_CIDR.cpp.obj
+
+Address\IPv6_CIDR.i: Address\IPv6_CIDR.cpp.i
+
+.PHONY : Address\IPv6_CIDR.i
+
+# target to preprocess a source file
+Address\IPv6_CIDR.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv6_CIDR.cpp.i
+.PHONY : Address\IPv6_CIDR.cpp.i
+
+Address\IPv6_CIDR.s: Address\IPv6_CIDR.cpp.s
+
+.PHONY : Address\IPv6_CIDR.s
+
+# target to generate assembly for a file
+Address\IPv6_CIDR.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\IPv6_CIDR.cpp.s
+.PHONY : Address\IPv6_CIDR.cpp.s
+
+Address\MAC.obj: Address\MAC.cpp.obj
+
+.PHONY : Address\MAC.obj
+
+# target to build an object file
+Address\MAC.cpp.obj:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\MAC.cpp.obj
+.PHONY : Address\MAC.cpp.obj
+
+Address\MAC.i: Address\MAC.cpp.i
+
+.PHONY : Address\MAC.i
+
+# target to preprocess a source file
+Address\MAC.cpp.i:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\MAC.cpp.i
+.PHONY : Address\MAC.cpp.i
+
+Address\MAC.s: Address\MAC.cpp.s
+
+.PHONY : Address\MAC.s
+
+# target to generate assembly for a file
+Address\MAC.cpp.s:
+	$(MAKE) -f CMakeFiles\Lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Lab1.dir\Address\MAC.cpp.s
+.PHONY : Address\MAC.cpp.s
+
 Vector.obj: Vector.cpp.obj
 
 .PHONY : Vector.obj
@@ -187,6 +376,27 @@ help:
 	@echo ... Lab1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Address/Address.obj
+	@echo ... Address/Address.i
+	@echo ... Address/Address.s
+	@echo ... Address/AddressHolder.obj
+	@echo ... Address/AddressHolder.i
+	@echo ... Address/AddressHolder.s
+	@echo ... Address/IPv4.obj
+	@echo ... Address/IPv4.i
+	@echo ... Address/IPv4.s
+	@echo ... Address/IPv4_CIDR.obj
+	@echo ... Address/IPv4_CIDR.i
+	@echo ... Address/IPv4_CIDR.s
+	@echo ... Address/IPv6.obj
+	@echo ... Address/IPv6.i
+	@echo ... Address/IPv6.s
+	@echo ... Address/IPv6_CIDR.obj
+	@echo ... Address/IPv6_CIDR.i
+	@echo ... Address/IPv6_CIDR.s
+	@echo ... Address/MAC.obj
+	@echo ... Address/MAC.i
+	@echo ... Address/MAC.s
 	@echo ... Vector.obj
 	@echo ... Vector.i
 	@echo ... Vector.s
