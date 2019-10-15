@@ -11,6 +11,9 @@ template<typename T>
 Linked_List<T>::Node::Node() : NodeIterator(), prev(nullptr), next(nullptr) {}
 
 template<typename T>
+Linked_List<T>::Node::Node(T data, NodeIterator<T> *_prev, NodeIterator<T> *_next) : NodeIterator(data), prev(_prev), next(_next) {}
+
+template<typename T>
 void Linked_List<T>::insert(NodeIterator<T> *pos, T data) {
     if(len == 0){
         //create head
@@ -19,12 +22,14 @@ void Linked_List<T>::insert(NodeIterator<T> *pos, T data) {
         tail->setPrev(head);
     }
     else{
-        auto temp= new Node(data, pos->getPrev(), pos);
+        Node* temp= new Node(data, pos->getPrev(), pos);
         //fix right
         pos->setPrev(temp);
         //in case it is not head fix left
-        if(pos->getPrev())
+        if(pos!=head){
             temp->getPrev()->setNext(temp);
+        }
+        else head = temp;
     }
     len++;
 }
@@ -35,8 +40,9 @@ T Linked_List<T>::extract(NodeIterator<T> * pos) {
     //we shouldn't delete tail
     if(pos!=tail) {
         //in case it is not head fix left
-        if(pos->getPrev())
+        if(pos!=head)
             pos->getPrev()->setNext(pos->getNext());
+        else head = pos->getNext();
         //fix right
         pos->getNext()->setPrev(pos->getPrev());
         delete pos;
@@ -46,12 +52,12 @@ T Linked_List<T>::extract(NodeIterator<T> * pos) {
 }
 
 template<typename T>
-typename Linked_List<T>::Node *Linked_List<T>::begin() {
+NodeIterator<T> *Linked_List<T>::begin() {
     return head;
 }
 
 template<typename T>
-typename Linked_List<T>::Node *Linked_List<T>::end() {
+NodeIterator<T> *Linked_List<T>::end() {
     return tail;
 }
 
@@ -59,10 +65,8 @@ template<typename T>
 Linked_List<T>::~Linked_List() {
     for(auto i = head; i!=tail; i=i->getNext()) delete i;
     delete tail;
+    std::cout<<"deleted Linked\n";
 }
-
-template<typename T>
-Linked_List<T>::Node::Node(T data, NodeIterator<T> *_prev, NodeIterator<T> *_next) : NodeIterator(data), prev(_prev), next(_next) {}
 
 template<typename T>
 NodeIterator<T> *Linked_List<T>::Node::getPrev() {

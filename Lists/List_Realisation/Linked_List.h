@@ -27,12 +27,12 @@ public:
     Linked_List();
     void insert(NodeIterator<T>*, T);
     T extract(NodeIterator<T>*);
-    Node* begin();
-    Node* end();
+    NodeIterator<T>* begin();
+    NodeIterator<T>* end();
     ~Linked_List();
 private:
-    Node* head;
-    Node* tail;
+    NodeIterator<T>* head;
+    NodeIterator<T>* tail;
 };
 
 #include "Linked_List.inl"

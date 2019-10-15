@@ -13,7 +13,6 @@ class Array_List : public List_Realisation<T> {
 public:
     class Node : public NodeIterator<T>{
     public:
-        friend void Array_List<T>::changeNode(Node*, T);
         Node();
         Node(T);
         Node* getPrev();
@@ -23,19 +22,18 @@ public:
     Array_List();
     void insert(NodeIterator<T>*, T);
     T extract(NodeIterator<T>*);
-    Node* begin();
-    Node* end();
+    NodeIterator<T>* begin();
+    NodeIterator<T>* end();
     ~Array_List();
 private:
     //>=2
-    const unsigned int grow_rate = 2;
-    Node* head;
+    const unsigned int grow_rate;
+    NodeIterator<T>* head;
     unsigned int reserved;
     //reserve more memory
     void grow();
     //release memory on empty
     void shrink();
-    void changeNode(Node*, T);
 };
 
 #include "Array_List.inl"

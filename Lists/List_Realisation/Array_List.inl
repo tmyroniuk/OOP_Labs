@@ -22,7 +22,7 @@ template<typename T>
 void Array_List<T>::grow() {
     auto temp = new Node[reserved*grow_rate];
     for(int i=0; i<reserved; i++)
-        temp[i] = head[i];
+        temp->setVal(head->getVal());
     reserved*=grow_rate;
     head = temp;
 }
@@ -31,23 +31,23 @@ template<typename T>
 void Array_List<T>::shrink() {
     if(len!=0) return;
     auto temp = new Node;
-    *temp = *head;
+    temp ->setVal(head->getVal());
     head = temp;
 }
 
 template<typename T>
-Array_List<T>::Array_List() : List_Realisation(), grow_rate(2),  reserved(1), head(new Node()) {}
+Array_List<T>::Array_List() : List_Realisation(), grow_rate(2),  reserved(2), head(new Node()) {}
 
 template<typename T>
 void Array_List<T>::insert(NodeIterator<T> *pos, T data) {
-    len++;
-    if(len>=reserved) grow();
-    auto i= head + len;
+    auto i = end();
     while(i!=pos) {
-        *i = *(i->getPrev());
+        i ->setVal(i->getPrev()->getVal());
         i--;
     }
-    changeNode(i ,data);
+    i->setVal(data);
+    len++;
+    if(len+1>=reserved) grow();
 }
 
 template<typename T>
@@ -55,32 +55,31 @@ T Array_List<T>::extract(NodeIterator<T> *pos) {
     T temp = pos->getVal();
     if(pos!=end()) {
         len--;
-        if (len == 0) shrink();
-        for(auto i=pos;i!=end();i++) *i = *(i->getNext());
+        if (len == 0)
+            shrink();
+        else
+            for(auto i=pos;i!=end();i++) *i = *(i->getNext());
     }
     return temp;
 }
 
-template<typename T>
-void Array_List<T>::changeNode(Node* from, T data) {
-    from->val = data;
-}
 
 template<typename T>
 Array_List<T>::Node::Node() : NodeIterator() {}
 
 template<typename T>
-typename Array_List<T>::Node *Array_List<T>::begin() {
+NodeIterator<T> *Array_List<T>::begin() {
     return head;
 }
 
 template<typename T>
-typename Array_List<T>::Node *Array_List<T>::end() {
+NodeIterator<T> *Array_List<T>::end() {
     return head+len;
 }
 
 template<typename T>
 Array_List<T>::~Array_List() {
     delete[] head;
+    std::cout<<"deleted Array\n";
 }
 
