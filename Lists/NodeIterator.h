@@ -15,6 +15,11 @@ public:
     virtual NodeIterator* getPrev()=0;
     virtual NodeIterator* getNext()=0;
     virtual T& getVal();
+    virtual void setVal(T);
+    //does nothing by default
+    virtual void setPrev(NodeIterator*);
+    //does nothing by default
+    virtual void setNext(NodeIterator*);
 };
 
 #include "NodeIterator.inl"

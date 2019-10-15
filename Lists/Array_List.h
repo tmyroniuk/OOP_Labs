@@ -14,6 +14,7 @@ public:
     class Node : public NodeIterator<T>{
     public:
         friend void Array_List<T>::changeNode(Node*, T);
+        Node();
         Node(T);
         Node* getPrev();
         Node* getNext();
@@ -24,6 +25,7 @@ public:
     T extract(NodeIterator<T>*);
     Node* begin();
     Node* end();
+    ~Array_List();
 private:
     //>=2
     const unsigned int grow_rate = 2;

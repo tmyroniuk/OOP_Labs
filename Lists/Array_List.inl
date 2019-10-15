@@ -36,7 +36,7 @@ void Array_List<T>::shrink() {
 }
 
 template<typename T>
-Array_List<T>::Array_List() : List_Realisation(), grow_rate(2),  reserved(1), head(new Node<T>) {}
+Array_List<T>::Array_List() : List_Realisation(), grow_rate(2),  reserved(1), head(new Node()) {}
 
 template<typename T>
 void Array_List<T>::insert(NodeIterator<T> *pos, T data) {
@@ -63,8 +63,11 @@ T Array_List<T>::extract(NodeIterator<T> *pos) {
 
 template<typename T>
 void Array_List<T>::changeNode(Node* from, T data) {
-    from->T = data;
+    from->val = data;
 }
+
+template<typename T>
+Array_List<T>::Node::Node() : NodeIterator() {}
 
 template<typename T>
 typename Array_List<T>::Node *Array_List<T>::begin() {
@@ -74,5 +77,10 @@ typename Array_List<T>::Node *Array_List<T>::begin() {
 template<typename T>
 typename Array_List<T>::Node *Array_List<T>::end() {
     return head+len;
+}
+
+template<typename T>
+Array_List<T>::~Array_List() {
+    delete[] head;
 }
 

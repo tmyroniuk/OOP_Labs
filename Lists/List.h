@@ -5,7 +5,6 @@
 #ifndef LISTS_LIST_H
 #define LISTS_LIST_H
 
-
 #include "List_Realisation.h"
 
 template <typename T>
@@ -18,7 +17,7 @@ public:
         friend NodeIterator<T>* List::getNode(const Iterator&);
         Iterator();
         Iterator(const Iterator&);
-        explicit Iterator(const NodeIterator<T>*);
+        explicit Iterator(NodeIterator<T>*);
         Iterator& operator= (const Iterator&);
         Iterator& operator++ ();
         const Iterator operator++ (int);
@@ -28,8 +27,12 @@ public:
         bool operator!= (const Iterator&);
         T &operator* ();
     };
+    enum Type {Linked, Array};
+    struct TypeHolder{
+        TypeHolder();
+        Type type;
+    };
 
-    enum Type {Array, Linked};
 
     List();
     Iterator begin();
@@ -44,10 +47,10 @@ public:
     T& back();
     unsigned int size();
 private:
+    TypeHolder type;
     List_Realisation<T>* realisation;
     NodeIterator<T>* getNode(const Iterator&);
 };
-
 #include "List.inl"
 
 #endif //LISTS_LIST_H

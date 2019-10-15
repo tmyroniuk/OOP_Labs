@@ -13,4 +13,21 @@ T &NodeIterator<T>::getVal() {
 }
 
 template<typename T>
-NodeIterator<T>::NodeIterator() : T() {}
+NodeIterator<T>::NodeIterator() : val() {}
+
+template<typename T>
+void NodeIterator<T>::setVal(T _val) {
+    val = _val;
+}
+
+template<typename T>
+void NodeIterator<T>::setPrev(NodeIterator *to) {
+    //Does nothing
+    return;
+}
+
+template<typename T>
+void NodeIterator<T>::setNext(NodeIterator *to) {
+    //Does nothing
+    return;
+}

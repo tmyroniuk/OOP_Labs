@@ -3,7 +3,7 @@
 //
 
 #include "List.h"
-#include "List_Proporties.h"
+//#include "List_Properties.h"
 #include "Linked_List.h"
 #include "Array_List.h"
 
@@ -29,7 +29,7 @@ template<typename T>
 List<T>::Iterator::Iterator(const List::Iterator &_that) : node(_that.node) {}
 
 template<typename T>
-List<T>::Iterator::Iterator(const NodeIterator<T> *_node) : node(_node){}
+List<T>::Iterator::Iterator(NodeIterator<T> *_node) : node(_node){}
 
 template<typename T>
 typename List<T>::Iterator &List<T>::Iterator::operator=(const List::Iterator &_that) {
@@ -58,7 +58,7 @@ const typename List<T>::Iterator  List<T>::Iterator::operator++(int) {
 
 template<typename T>
 const typename List<T>::Iterator List<T>::Iterator::operator--(int) {
-    auto temp = *this
+    auto temp = *this;
     node = node->getPrev();
     return temp;
 }
@@ -94,15 +94,13 @@ unsigned int List<T>::size() {
 
 template<typename T>
 List<T>::List() {
-    switch (List_Proporties::type) {
-        case List_Proporties::Type::Linked :{
+    switch (type.type){
+        case Linked:
             realisation = new Linked_List<T>();
             break;
-        }
-        case List_Proporties::Type::Array :{
+        case Array:
             realisation = new Array_List<T>();
             break;
-        }
     }
 }
 
@@ -135,3 +133,6 @@ template<typename T>
 T &List<T>::back() {
     return realisation->end()->getPrev()->getVal();
 }
+
+template<typename T>
+List<T>::TypeHolder::TypeHolder() : type() {}

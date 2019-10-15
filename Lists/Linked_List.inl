@@ -15,14 +15,16 @@ void Linked_List<T>::insert(NodeIterator<T> *pos, T data) {
     if(len == 0){
         //create head
         head = new Node(data, nullptr, tail);
-        changeNode(tail, head, nullptr);
+        //fix tail
+        tail->setPrev(head);
     }
     else{
         auto temp= new Node(data, pos->getPrev(), pos);
         //fix right
-        changeNode(pos, temp, pos->getNext());
+        pos->setPrev(temp);
         //in case it is not head fix left
-        if(pos->getPrev()) changeNode(temp->getPrev(), temp->getPrev()->getPrev(), temp);
+        if(pos->getPrev())
+            temp->getPrev()->setNext(temp);
     }
     len++;
 }
@@ -34,19 +36,13 @@ T Linked_List<T>::extract(NodeIterator<T> * pos) {
     if(pos!=tail) {
         //in case it is not head fix left
         if(pos->getPrev())
-            changeNode(pos->getPrev(), pos->getPrev()->getPrev(), pos->getNext());
+            pos->getPrev()->setNext(pos->getNext());
         //fix right
-        changeNode(pos->getNext(), pos->getPrev(), pos->getNext()->getNext());
+        pos->getNext()->setPrev(pos->getPrev());
         delete pos;
         len--;
     }
     return temp;
-}
-
-template<typename T>
-void Linked_List<T>::changeNode(Linked_List::Node * from, Linked_List::Node * _prev, Linked_List::Node *_next) {
-    (from->prev) = _prev;
-    (fron->next) = _next;
 }
 
 template<typename T>
@@ -60,14 +56,30 @@ typename Linked_List<T>::Node *Linked_List<T>::end() {
 }
 
 template<typename T>
-Linked_List<T>::Node::Node(T data, Linked_List::Node *_prev, Linked_List::Node *_next) : NodeIterator(data), prev(_prev), next(_next) {}
+Linked_List<T>::~Linked_List() {
+    for(auto i = head; i!=tail; i=i->getNext()) delete i;
+    delete tail;
+}
 
 template<typename T>
-typename Linked_List<T>::Node *Linked_List<T>::Node::getPrev() {
+Linked_List<T>::Node::Node(T data, NodeIterator<T> *_prev, NodeIterator<T> *_next) : NodeIterator(data), prev(_prev), next(_next) {}
+
+template<typename T>
+NodeIterator<T> *Linked_List<T>::Node::getPrev() {
     return prev;
 }
 
 template<typename T>
-typename Linked_List<T>::Node *Linked_List<T>::Node::getNext() {
+NodeIterator<T> *Linked_List<T>::Node::getNext() {
     return next;
+}
+
+template<typename T>
+void Linked_List<T>::Node::setPrev(NodeIterator<T> *to) {
+    prev = to;
+}
+
+template<typename T>
+void Linked_List<T>::Node::setNext(NodeIterator<T> *to) {
+    next = to;
 }

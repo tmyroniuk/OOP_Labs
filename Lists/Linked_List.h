@@ -13,14 +13,15 @@ class Linked_List : public List_Realisation<T> {
 public:
     class Node : public NodeIterator<T>{
     private:
-        Node* next;
-        Node* prev;
+        NodeIterator<T>* next;
+        NodeIterator<T>* prev;
     public:
-        friend void Linked_List<T>::changeNode(Node*, Node*, Node*);
         Node();
-        Node(T, Node*, Node*);
-        Node* getPrev();
-        Node* getNext();
+        Node(T, NodeIterator<T>*, NodeIterator<T>*);
+        NodeIterator<T>* getPrev();
+        NodeIterator<T>* getNext();
+        virtual void setPrev(NodeIterator<T>*);
+        virtual void setNext(NodeIterator<T>*);
     };
 
     Linked_List();
@@ -28,8 +29,8 @@ public:
     T extract(NodeIterator<T>*);
     Node* begin();
     Node* end();
+    ~Linked_List();
 private:
-    void changeNode(Node*, Node*, Node*);
     Node* head;
     Node* tail;
 };
