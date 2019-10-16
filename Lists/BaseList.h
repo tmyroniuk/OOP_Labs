@@ -24,6 +24,7 @@ public:
     T& front();
     T& back();
     unsigned int size();
+    bool empty();
 protected:
     List_Realisation<T>* realisation;
     NodeIterator<T>* getNode(const Iterator<T>&);

@@ -74,3 +74,8 @@ template<typename T>
 BaseList<T>::~BaseList() {
     delete realisation;
 }
+
+template<typename T>
+bool BaseList<T>::empty() {
+    return len==0;
+}
