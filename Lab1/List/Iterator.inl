@@ -17,7 +17,7 @@ typename List<T>::Iterator& List<T>::Iterator::operator++() {
 }
 
 template<typename T>
-typename List<T>::Iterator List<T>::Iterator::operator++(int) {
+const typename List<T>::Iterator List<T>::Iterator::operator++(int) {
     List<T>::Iterator temp(*this);
     operator++();
     return temp;
@@ -30,7 +30,7 @@ typename List<T>::Iterator& List<T>::Iterator::operator--() {
 }
 
 template<typename T>
-typename List<T>::Iterator List<T>::Iterator::operator--(int) {
+const typename List<T>::Iterator List<T>::Iterator::operator--(int) {
     List<T>::Iterator temp(*this);
     operator--();
     return temp;

@@ -4,6 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Projects/OOP_Labs/Lab1/Address/Address.cpp" "C:/Projects/OOP_Labs/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/Address/Address.cpp.obj"
+  "C:/Projects/OOP_Labs/Lab1/Address/AddressHolder.cpp" "C:/Projects/OOP_Labs/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/Address/AddressHolder.cpp.obj"
+  "C:/Projects/OOP_Labs/Lab1/Address/IPv4.cpp" "C:/Projects/OOP_Labs/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/Address/IPv4.cpp.obj"
+  "C:/Projects/OOP_Labs/Lab1/Address/IPv4_CIDR.cpp" "C:/Projects/OOP_Labs/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/Address/IPv4_CIDR.cpp.obj"
+  "C:/Projects/OOP_Labs/Lab1/Address/IPv6.cpp" "C:/Projects/OOP_Labs/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/Address/IPv6.cpp.obj"
+  "C:/Projects/OOP_Labs/Lab1/Address/IPv6_CIDR.cpp" "C:/Projects/OOP_Labs/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/Address/IPv6_CIDR.cpp.obj"
+  "C:/Projects/OOP_Labs/Lab1/Address/MAC.cpp" "C:/Projects/OOP_Labs/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/Address/MAC.cpp.obj"
   "C:/Projects/OOP_Labs/Lab1/Vector.cpp" "C:/Projects/OOP_Labs/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/Vector.cpp.obj"
   "C:/Projects/OOP_Labs/Lab1/main.cpp" "C:/Projects/OOP_Labs/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/main.cpp.obj"
   )
