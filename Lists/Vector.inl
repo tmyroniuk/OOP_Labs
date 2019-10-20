@@ -5,4 +5,9 @@
 #include "Vector.h"
 
 template<typename T>
-Vector<T>::Vector() : BaseList(new Array_List<T>()) {}
+Vector<T>::Vector() : BaseList(new ArrayList<T>()) {}
+
+template<typename T>
+T &Vector<T>::operator[](int _val) {
+    return realisation->begin()->forward(_val)->getVal();
+}

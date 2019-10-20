@@ -12,8 +12,10 @@
 class IPv4_Subnet : public Subnet {
 public:
     IPv4_Subnet();
-    explicit IPv4_Subnet(const std::string&);
-    IPv4_Subnet(const IPv4&, uint8_t);
+
+    explicit IPv4_Subnet(const std::string &);
+
+    IPv4_Subnet(const IPv4 &, uint8_t);
 };
 
 

@@ -9,24 +9,36 @@
 #include "IPv6.h"
 #include "Parser/MAC_Parser.h"
 
-class MAC : public Address{
+class MAC : public Address {
 private:
     static MAC_Parser parser;
     uint16_t data[3];
 public:
     MAC();
-    MAC(const MAC&);
+
+    MAC(const MAC &);
+
     explicit MAC(std::string);
-    std::vector<bool> as_bits() const override;
-    std::string as_string() const override;
-    IPv6 as_IPv6() const override;
-    bool operator==(const MAC&);
-    bool operator!=(const MAC&);
-    bool operator>(const MAC&);
-    bool operator<(const MAC&);
-    bool operator>=(const MAC&);
-    bool operator<=(const MAC&);
-    MAC &operator=(const MAC&);
+
+    std::vector<bool> asBits() const override;
+
+    std::string asString() const override;
+
+    IPv6 asIPv6() const override;
+
+    bool operator==(const MAC &);
+
+    bool operator!=(const MAC &);
+
+    bool operator>(const MAC &);
+
+    bool operator<(const MAC &);
+
+    bool operator>=(const MAC &);
+
+    bool operator<=(const MAC &);
+
+    MAC &operator=(const MAC &);
 };
 
 

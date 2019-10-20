@@ -8,13 +8,12 @@
 #include "BaseList.h"
 
 template<typename T>
-class List : public BaseList<T>{
+class List : public BaseList<T> {
 public:
     List();
 };
 
 #include "List.inl"
-
 
 
 #endif //LISTS_LIST_H

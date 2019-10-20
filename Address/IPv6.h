@@ -15,19 +15,32 @@ private:
     uint32_t data[4];
 public:
     IPv6();
-    IPv6(const IPv6&);
+
+    IPv6(const IPv6 &);
+
     explicit IPv6(uint32_t[4]);
+
     explicit IPv6(std::string);
-    std::vector<bool> as_bits() const override;
-    std::string as_string() const override;
-    IPv6 as_IPv6() const override;
-    bool operator==(const IPv6&);
-    bool operator!=(const IPv6&);
-    bool operator>(const IPv6&);
-    bool operator<(const IPv6&);
-    bool operator>=(const IPv6&);
-    bool operator<=(const IPv6&);
-    IPv6 &operator=(const IPv6&);
+
+    std::vector<bool> asBits() const override;
+
+    std::string asString() const override;
+
+    IPv6 asIPv6() const override;
+
+    bool operator==(const IPv6 &);
+
+    bool operator!=(const IPv6 &);
+
+    bool operator>(const IPv6 &);
+
+    bool operator<(const IPv6 &);
+
+    bool operator>=(const IPv6 &);
+
+    bool operator<=(const IPv6 &);
+
+    IPv6 &operator=(const IPv6 &);
 };
 
 

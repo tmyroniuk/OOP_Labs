@@ -13,9 +13,11 @@
 
 class Parser {
 protected:
-    std::vector<bool> int_to_bits(uint32_t, uint32_t);
-    uint32_t hex_to_int(const std::string&);
-    std::string int_to_hex(uint32_t);
+    std::vector<bool> intToBits(uint32_t data, uint32_t bits);
+
+    uint32_t hexToInt(const std::string &data);
+
+    std::string intToHex(uint32_t data);
 };
 
 

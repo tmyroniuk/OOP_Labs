@@ -8,12 +8,12 @@ uint8_t Subnet::get_bits() {
     return bits;
 }
 
-bool Subnet::contains(const Address& _address) {
-    auto first = address->as_bits();
-    auto second = _address.as_bits();
-    int i=0;
-    while(i<first.size()-bits){
-        if(first[i]!=second[i])
+bool Subnet::contains(const Address &_address) {
+    auto first = address->asBits();
+    auto second = _address.asBits();
+    int i = 0;
+    while (i < first.size() - bits) {
+        if (first[i] != second[i])
             return false;
         i++;
     }
@@ -25,12 +25,12 @@ Subnet::Subnet() : bits(), address() {}
 Subnet::Subnet(Address *_address, uint8_t _bits) : bits(_bits), address(_address) {}
 
 Address::Type Subnet::type() {
-    return address->get_Type();
+    return address->getType();
 }
 
 int Subnet::sub_parser(const std::string &string) {
-    int i=0;
-    for(;i<string.size() && string[i]!='/'; i++);
+    int i = 0;
+    for (; i < string.size() && string[i] != '/'; i++);
     return i;
 }
 

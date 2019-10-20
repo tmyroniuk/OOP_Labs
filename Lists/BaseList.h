@@ -5,30 +5,46 @@
 #ifndef LISTS_BASELIST_H
 #define LISTS_BASELIST_H
 
-#include "List_Realisation/List_Realisation.h"
+#include "List_Realisation/ListRealisation.h"
 #include "Iterator.h"
 
-template <typename T>
+template<typename T>
 class BaseList {
 public:
-    explicit BaseList(List_Realisation<T>*);
-    ~BaseList();
+    explicit BaseList(ListRealisation<T> *type);
+
+    virtual ~BaseList();
+
     Iterator<T> begin();
+
     Iterator<T> end();
-    void insert(const Iterator<T>&, T);
-    T extract(const Iterator<T>&);
-    void push_back(T);
+
+    void insert(const Iterator<T> &pos, T data);
+
+    T extract(const Iterator<T> &pos);
+
+    void push_back(T data);
+
     T pop_back();
-    void push_front(T);
+
+    void push_front(T data);
+
     T pop_front();
-    T& front();
-    T& back();
+
+    T &front();
+
+    T &back();
+
     unsigned int size();
+
     bool empty();
+
 protected:
-    List_Realisation<T>* realisation;
-    NodeIterator<T>* getNode(const Iterator<T>&);
+    ListRealisation<T> *realisation;
+
+    NodeIterator<T> *getNode(const Iterator<T> &_iterator);
 };
+
 #include "BaseList.inl"
 
 #endif //LISTS_BASELIST_H

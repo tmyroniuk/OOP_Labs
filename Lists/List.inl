@@ -5,4 +5,4 @@
 #include "List.h"
 
 template<typename T>
-List<T>::List() : BaseList(new Linked_List<T>()) {}
+List<T>::List() : BaseList(new LinkedList<T>()) {}

@@ -12,8 +12,10 @@
 class IPv6_Subnet : public Subnet {
 public:
     IPv6_Subnet();
-    explicit IPv6_Subnet(const std::string&);
-    IPv6_Subnet(const IPv6&, uint8_t);
+
+    explicit IPv6_Subnet(const std::string &);
+
+    IPv6_Subnet(const IPv6 &, uint8_t);
 };
 
 

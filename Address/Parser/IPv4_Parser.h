@@ -10,9 +10,11 @@
 
 class IPv4_Parser : Parser {
 public:
-    uint32_t data_from_string(const std::string&);
-    std::vector<bool> as_bits(uint32_t);
-    std::string as_string(uint32_t);
+    uint32_t dataFromString(const std::string &string);
+
+    std::vector<bool> asBits(uint32_t data);
+
+    std::string asString(uint32_t data);
 };
 
 

@@ -10,9 +10,11 @@
 
 class MAC_Parser : Parser {
 public:
-    uint16_t block_from_string(std::string&);
-    std::vector<bool> as_bits(const uint16_t[3]);
-    std::string as_string(const uint16_t[3]);
+    uint16_t blockFromString(std::string &string);
+
+    std::vector<bool> asBits(const uint16_t data[3]);
+
+    std::string asString(const uint16_t data[3]);
 };
 
 

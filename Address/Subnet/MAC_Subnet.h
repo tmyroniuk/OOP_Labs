@@ -11,10 +11,11 @@
 class MAC_Subnet : public Subnet {
 public:
     MAC_Subnet();
-    explicit MAC_Subnet(const std::string&);
-    MAC_Subnet(const MAC&, uint8_t);
-};
 
+    explicit MAC_Subnet(const std::string &);
+
+    MAC_Subnet(const MAC &, uint8_t);
+};
 
 
 #endif //ADDRESS_MAC_SUBNET_H

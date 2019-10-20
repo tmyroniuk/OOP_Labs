@@ -10,9 +10,11 @@
 
 class IPv6_Parser : public Parser {
 public:
-    uint32_t block_from_string(std::string&);
-    std::vector<bool> as_bits(const uint32_t[4]);
-    std::string as_string(const uint32_t[4]);
+    uint32_t blockFromString(std::string &string);
+
+    std::vector<bool> asBits(const uint32_t data[4]);
+
+    std::string asString(const uint32_t data[4]);
 };
 
 

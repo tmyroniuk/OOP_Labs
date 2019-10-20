@@ -3,8 +3,8 @@
 //
 
 #include "BaseList.h"
-#include "List_Realisation/Linked_List.h"
-#include "List_Realisation/Array_List.h"
+#include "List_Realisation/LinkedList.h"
+#include "List_Realisation/ArrayList.h"
 
 template<typename T>
 NodeIterator<T> *BaseList<T>::getNode(const Iterator<T> &_iterator) {
@@ -38,7 +38,7 @@ unsigned int BaseList<T>::size() {
 }
 
 template<typename T>
-BaseList<T>::BaseList(List_Realisation<T>* type) : realisation(type) {}
+BaseList<T>::BaseList(ListRealisation<T> *type) : realisation(type) {}
 
 template<typename T>
 void BaseList<T>::push_back(T data) {
@@ -77,5 +77,5 @@ BaseList<T>::~BaseList() {
 
 template<typename T>
 bool BaseList<T>::empty() {
-    return len==0;
+    return len == 0;
 }

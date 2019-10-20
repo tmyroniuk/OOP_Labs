@@ -8,9 +8,11 @@
 #include "BaseList.h"
 
 template<typename T>
-class Vector : public BaseList<T>{
+class Vector : public BaseList<T> {
 public:
     Vector();
+
+    T &operator[](int _val);
 };
 
 #include "Vector.inl"
