@@ -12,13 +12,17 @@
 class IPv6;
 
 class Address {
+public:
+    enum Type {IPv6_t, IPv4_t, MAC_t};
+    explicit Address(uint8_t, Type);
+    virtual std::vector<bool> as_bits() const =0;
+    virtual std::string as_string() const =0;
+    virtual IPv6 as_IPv6() const =0;
+    Type get_Type() const;
+    uint8_t get_size() const;
 protected:
     uint8_t size;
-public:
-    explicit Address(uint8_t);
-    virtual std::vector<bool> as_bits() =0;
-    virtual std::string as_string() =0;
-    virtual IPv6 as_IPv6() =0;
+    Type type;
 };
 
 

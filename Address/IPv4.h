@@ -17,9 +17,16 @@ public:
     IPv4(const IPv4&);
     explicit IPv4(const std::string&);
     std::uint32_t as_uint32();
-    std::vector<bool> as_bits();
-    std::string as_string();
-    IPv6 as_IPv6() override;
+    std::vector<bool> as_bits() const override;
+    std::string as_string() const override;
+    IPv6 as_IPv6() const override;
+    bool operator==(const IPv4&);
+    bool operator!=(const IPv4&);
+    bool operator>(const IPv4&);
+    bool operator<(const IPv4&);
+    bool operator>=(const IPv4&);
+    bool operator<=(const IPv4&);
+    IPv4 &operator=(const IPv4&);
 };
 
 

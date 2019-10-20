@@ -17,9 +17,16 @@ public:
     MAC();
     MAC(const MAC&);
     explicit MAC(std::string);
-    std::vector<bool> as_bits();
-    std::string as_string();
-    IPv6 as_IPv6();
+    std::vector<bool> as_bits() const override;
+    std::string as_string() const override;
+    IPv6 as_IPv6() const override;
+    bool operator==(const MAC&);
+    bool operator!=(const MAC&);
+    bool operator>(const MAC&);
+    bool operator<(const MAC&);
+    bool operator>=(const MAC&);
+    bool operator<=(const MAC&);
+    MAC &operator=(const MAC&);
 };
 
 
