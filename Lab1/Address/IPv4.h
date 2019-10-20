@@ -1,19 +1,46 @@
 //
-// Created by tmyro on 06.10.2019.
+// Created by tmyro on 16.10.2019.
 //
 
-#ifndef LAB1_IPV4_H
-#define LAB1_IPV4_H
+#ifndef ADDRESS_IPV4_H
+#define ADDRESS_IPV4_H
 
+#include "IPv6.h"
+#include "Parser/IPv4_Parser.h"
 
-#include "AddressHolder.h"
-
-class IPv4 : public AddressHolder {
+class IPv4 : public Address {
+private:
+    uint32_t data;
+    static IPv4_Parser parser;
 public:
-    IPv4(uint8_t*);
-    virtual std::string asString();
+    IPv4();
 
+    IPv4(const IPv4 &);
+
+    explicit IPv4(const std::string &);
+
+    std::uint32_t asUint32();
+
+    std::vector<bool> asBits() const override;
+
+    std::string asString() const override;
+
+    IPv6 asIPv6() const override;
+
+    bool operator==(const IPv4 &);
+
+    bool operator!=(const IPv4 &);
+
+    bool operator>(const IPv4 &);
+
+    bool operator<(const IPv4 &);
+
+    bool operator>=(const IPv4 &);
+
+    bool operator<=(const IPv4 &);
+
+    IPv4 &operator=(const IPv4 &);
 };
 
 
-#endif //LAB1_IPV4_H
+#endif //ADDRESS_IPV4_H

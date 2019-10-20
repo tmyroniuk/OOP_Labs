@@ -1,28 +1,39 @@
 //
-// Created by tmyro on 07.10.2019.
+// Created by tmyro on 16.10.2019.
 //
 
-#ifndef LAB1_ADDRESS_H
-#define LAB1_ADDRESS_H
+#ifndef ADDRESS_ADDRESS_H
+#define ADDRESS_ADDRESS_H
 
+#include <iostream>
+#include <cstdint>
+#include <vector>
+#include <string>
 
-#include "AddressHolder.h"
+class IPv6;
 
 class Address {
-protected:
-    AddressHolder* address;
 public:
-    Address(const std::string&);
-    Address(char*, int);
-    Address(const Address&);
-    std::unique_ptr <AddressHolder> get();
-    Address& operator=(const Address&);
-    bool operator==(const Address&);
-    bool operator!=(const Address&);
-    bool operator>=(const Address&);
-    bool operator<=(const Address&);
-    bool operator>(const Address&);
-    bool operator<(const Address&);
+    enum Type {
+        IPv6_t, IPv4_t, MAC_t
+    };
+
+    explicit Address(uint8_t, Type);
+
+    virtual std::vector<bool> asBits() const = 0;
+
+    virtual std::string asString() const = 0;
+
+    virtual IPv6 asIPv6() const = 0;
+
+    Type getType() const;
+
+    uint8_t getSize() const;
+
+protected:
+    uint8_t size;
+    Type type;
 };
 
-#endif //LAB1_ADDRESS_H
+
+#endif //ADDRESS_ADDRESS_H

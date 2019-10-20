@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.15)
 project(Lab1)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Lab1 main.cpp BaseList/BaseList.inl BaseList/BaseList.h List/List.inl List/List.h Vector.cpp Vector.h Address/AddressHolder.cpp Address/AddressHolder.h Address/IPv4.cpp Address/IPv4.h Address/Address.cpp Address/Address.h Address/IPv6.cpp Address/IPv6.h Address/MAC.cpp Address/MAC.h Address/IPv4_CIDR.cpp Address/IPv4_CIDR.h Address/IPv6_CIDR.cpp Address/IPv6_CIDR.h)
+add_executable(Lab1 main.cpp List/BaseList.inl List/BaseList.h List/List_Realisation/NodeIterator.inl List/List_Realisation/NodeIterator.h List/List_Realisation/ListRealisation.inl List/List_Realisation/ListRealisation.h List/List_Realisation/LinkedList.inl List/List_Realisation/LinkedList.h List/List_Realisation/ArrayList.inl List/List_Realisation/ArrayList.h List/Iterator.inl List/Iterator.h List/Vector.inl List/Vector.h List/List.inl List/List.h Address/Address.cpp Address/Address.h Address/IPv4.cpp Address/IPv4.h Address/Parser/Parser.cpp Address/Parser/Parser.h Address/Parser/IPv4_Parser.cpp Address/Parser/IPv4_Parser.h Address/Parser/IPv6_Parser.cpp Address/Parser/IPv6_Parser.h Address/IPv6.cpp Address/IPv6.h Address/Parser/MAC_Parser.cpp Address/Parser/MAC_Parser.h Address/MAC.cpp Address/MAC.h Address/Subnet/IPv4_Subnet.cpp Address/Subnet/IPv4_Subnet.h Address/Subnet/IPv6_Subnet.cpp Address/Subnet/IPv6_Subnet.h Address/Subnet/MAC_Subnet.cpp Address/Subnet/MAC_Subnet.h Address/Subnet/Subnet.cpp Address/Subnet/Subnet.h)

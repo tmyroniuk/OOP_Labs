@@ -1,81 +1,83 @@
 //
-// Created by tmyro on 06.10.2019.
+// Created by tmyro on 15.10.2019.
 //
 
-#include "List.h"
+#include "Iterator.h"
 
 template<typename T>
-typename List<T>::Iterator& List<T>::Iterator::operator=(const List<T>::Iterator& that) {
-    current = that.current;
+Iterator<T>::Iterator() : node(nullptr) {}
+
+template<typename T>
+Iterator<T>::Iterator(const Iterator &that) : node(that.node) {}
+
+template<typename T>
+Iterator<T>::Iterator(NodeIterator<T> *_node) : node(_node) {}
+
+template<typename T>
+Iterator<T> &Iterator<T>::operator=(const Iterator &that) {
+    node = that.node;
     return *this;
 }
 
 template<typename T>
-typename List<T>::Iterator& List<T>::Iterator::operator++() {
-    current = current->next;
+Iterator<T> &Iterator<T>::operator++() {
+    node = node->getNext();
     return *this;
 }
 
 template<typename T>
-const typename List<T>::Iterator List<T>::Iterator::operator++(int) {
-    List<T>::Iterator temp(*this);
-    operator++();
-    return temp;
-}
-
-template<typename T>
-typename List<T>::Iterator& List<T>::Iterator::operator--() {
-    current = current->prev;
+Iterator<T> &Iterator<T>::operator--() {
+    node = node->getPrev();
     return *this;
 }
 
 template<typename T>
-const typename List<T>::Iterator List<T>::Iterator::operator--(int) {
-    List<T>::Iterator temp(*this);
-    operator--();
+Iterator<T> Iterator<T>::operator++(int) {
+    auto temp = *this;
+    node = node->getNext();
     return temp;
 }
 
 template<typename T>
-void List<T>::Iterator::operator+=(const int &that) {
-    if(that<0) (*this) -= (-that);
-    else
-        for(int i=0; i<that; i++) ++(*this);
-}
-
-template<typename T>
-void List<T>::Iterator::operator-=(const int &that) {
-    if(that<0) (*this) += (-that);
-    else
-        for(int i=0; i<that; i++, (*this)--);
-}
-
-template<typename T>
-typename List<T>::Iterator List<T>::Iterator::operator-(const int &that) {
-    List<T>::Iterator temp = (*this);
-    temp-=that;
-    return temp;
-}
-
-template <typename T>
-typename List<T>::Iterator List<T>::Iterator::operator+(const int &that) {
-    List<T>::Iterator temp = (*this);
-    temp+=that;
+Iterator<T> Iterator<T>::operator--(int) {
+    auto temp = *this;
+    node = node->getPrev();
     return temp;
 }
 
 template<typename T>
-List<T>::Iterator::Iterator(const Iterator& that): current(that.current) {}
-
-template<typename T>
-bool List<T>::Iterator::operator==(const List<T>::Iterator & that) {
-    return current == that.current;
+bool Iterator<T>::operator==(const Iterator &that) {
+    return that.node == node;
 }
 
 template<typename T>
-bool List<T>::Iterator::operator!=(const List<T>::Iterator & that) {
-    return current == that.current;
+bool Iterator<T>::operator!=(const Iterator &that) {
+    return that.node != node;
 }
 
 template<typename T>
-List<T>::Iterator::Iterator(): current(nullptr) {}
+T &Iterator<T>::operator*() {
+    return node->getVal();
+}
+
+template<typename T>
+Iterator<T> Iterator<T>::operator+(int _val) {
+    return Iterator(node->forward(val));
+}
+
+template<typename T>
+Iterator<T> Iterator<T>::operator-(int _val) {
+    return Iterator(node->backward(val));
+}
+
+template<typename T>
+Iterator<T> &Iterator<T>::operator+=(int _val) {
+    node = node->forward(_val);
+    return *this;
+}
+
+template<typename T>
+Iterator<T> &Iterator<T>::operator-=(int _val) {
+    node = node->backward(_val);
+    return *this;
+}

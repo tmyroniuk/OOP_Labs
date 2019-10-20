@@ -1,18 +1,47 @@
 //
-// Created by tmyro on 13.10.2019.
+// Created by tmyro on 20.10.2019.
 //
 
-#ifndef LAB1_IPV6_H
-#define LAB1_IPV6_H
+#ifndef ADDRESS_IPV6_H
+#define ADDRESS_IPV6_H
 
 
-#include "AddressHolder.h"
+#include "Address.h"
+#include "Parser/IPv6_Parser.h"
 
-class IPv6 : public AddressHolder {
+class IPv6 : public Address {
+private:
+    static IPv6_Parser parser;
+    uint32_t data[4];
 public:
-    IPv6(uint8_t*);
-    virtual std::string asString();
+    IPv6();
+
+    IPv6(const IPv6 &);
+
+    explicit IPv6(uint32_t[4]);
+
+    explicit IPv6(std::string);
+
+    std::vector<bool> asBits() const override;
+
+    std::string asString() const override;
+
+    IPv6 asIPv6() const override;
+
+    bool operator==(const IPv6 &);
+
+    bool operator!=(const IPv6 &);
+
+    bool operator>(const IPv6 &);
+
+    bool operator<(const IPv6 &);
+
+    bool operator>=(const IPv6 &);
+
+    bool operator<=(const IPv6 &);
+
+    IPv6 &operator=(const IPv6 &);
 };
 
 
-#endif //LAB1_IPV6_H
+#endif //ADDRESS_IPV6_H

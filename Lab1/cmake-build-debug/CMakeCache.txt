@@ -207,6 +207,12 @@ Lab1_BINARY_DIR:STATIC=C:/Projects/OOP_Labs/Lab1/cmake-build-debug
 //Value Computed by CMake
 Lab1_SOURCE_DIR:STATIC=C:/Projects/OOP_Labs/Lab1
 
+//Value Computed by CMake
+Lists_BINARY_DIR:STATIC=C:/Projects/OOP_Labs/Lab1/cmake-build-debug
+
+//Value Computed by CMake
+Lists_SOURCE_DIR:STATIC=C:/Projects/OOP_Labs/Lab1
+
 
 ########################
 # INTERNAL cache entries
