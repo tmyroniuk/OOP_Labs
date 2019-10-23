@@ -35,40 +35,40 @@ IPv6 MAC::asIPv6() const {
     return IPv6(res);
 }
 
-bool MAC::operator==(const MAC &that) {
+bool MAC::operator==(const MAC &that) const {
     for (int i = 0; i < 3; i++)
         if (data[i] != that.data[i]) return false;
     return true;
 }
 
-bool MAC::operator!=(const MAC &that) {
+bool MAC::operator!=(const MAC &that) const {
     for (int i = 0; i < 3; i++)
         if (data[i] != that.data[i]) return true;
     return false;
 }
 
-bool MAC::operator>(const MAC &that) {
+bool MAC::operator>(const MAC &that) const {
     for (int i = 0; i < 3; i++)
         if (data[i] > that.data[i]) return true;
         else if (data[i] < that.data[i]) return false;
     return false;
 }
 
-bool MAC::operator<(const MAC &that) {
+bool MAC::operator<(const MAC &that) const {
     for (int i = 0; i < 3; i++)
         if (data[i] < that.data[i]) return true;
         else if (data[i] > that.data[i]) return false;
     return false;
 }
 
-bool MAC::operator>=(const MAC &that) {
+bool MAC::operator>=(const MAC &that) const {
     for (int i = 0; i < 3; i++)
         if (data[i] > that.data[i]) return true;
         else if (data[i] < that.data[i]) return false;
     return true;
 }
 
-bool MAC::operator<=(const MAC &that) {
+bool MAC::operator<=(const MAC &that) const {
     for (int i = 0; i < 3; i++)
         if (data[i] < that.data[i]) return true;
         else if (data[i] > that.data[i]) return false;

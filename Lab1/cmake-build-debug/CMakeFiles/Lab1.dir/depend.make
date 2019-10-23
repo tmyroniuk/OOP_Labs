@@ -82,6 +82,7 @@ CMakeFiles\Lab1.dir\main.cpp.obj: ..\Address\Parser\Parser.h
 CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\BaseList.h
 CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\BaseList.inl
 CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\Iterator.h
+CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\Iterator.inl
 CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\List.h
 CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\List.inl
 CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\List_Realisation\ArrayList.h
@@ -92,5 +93,9 @@ CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\List_Realisation\ListRealisation.h
 CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\List_Realisation\ListRealisation.inl
 CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\List_Realisation\NodeIterator.h
 CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\List_Realisation\NodeIterator.inl
+CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\Sort\QuickSort.h
+CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\Sort\Sort.h
+CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\Vector.h
+CMakeFiles\Lab1.dir\main.cpp.obj: ..\List\Vector.inl
 CMakeFiles\Lab1.dir\main.cpp.obj: ..\main.cpp
 

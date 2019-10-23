@@ -9,6 +9,7 @@
 #include "Address.h"
 #include "Parser/IPv6_Parser.h"
 
+//implements Address as IPv6 address
 class IPv6 : public Address {
 private:
     static IPv6_Parser parser;
@@ -22,23 +23,26 @@ public:
 
     explicit IPv6(std::string);
 
+    //return data as bits vector
     std::vector<bool> asBits() const override;
 
+    //return stored data as string in appropriate form using parser
     std::string asString() const override;
 
+    //return data as IPv6 object (return *this)
     IPv6 asIPv6() const override;
 
-    bool operator==(const IPv6 &);
+    bool operator==(const IPv6 &) const;
 
-    bool operator!=(const IPv6 &);
+    bool operator!=(const IPv6 &) const;
 
-    bool operator>(const IPv6 &);
+    bool operator>(const IPv6 &) const;
 
-    bool operator<(const IPv6 &);
+    bool operator<(const IPv6 &) const;
 
-    bool operator>=(const IPv6 &);
+    bool operator>=(const IPv6 &) const;
 
-    bool operator<=(const IPv6 &);
+    bool operator<=(const IPv6 &) const;
 
     IPv6 &operator=(const IPv6 &);
 };

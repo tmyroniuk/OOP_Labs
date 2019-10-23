@@ -198,6 +198,18 @@
 		<Unit filename="C:/Projects/OOP_Labs/Lab1/List/List_Realisation/NodeIterator.inl">
 			<Option target="Lab1"/>
 		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/List/Sort/InsertionSort.h">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/List/Sort/MergeSort.h">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/List/Sort/QuickSort.h">
+			<Option target="Lab1"/>
+		</Unit>
+		<Unit filename="C:/Projects/OOP_Labs/Lab1/List/Sort/Sort.h">
+			<Option target="Lab1"/>
+		</Unit>
 		<Unit filename="C:/Projects/OOP_Labs/Lab1/List/Vector.h">
 			<Option target="Lab1"/>
 		</Unit>

@@ -34,40 +34,40 @@ IPv6 IPv6::asIPv6() const {
     return *this;
 }
 
-bool IPv6::operator==(const IPv6 &that) {
+bool IPv6::operator==(const IPv6 &that) const {
     for (int i = 0; i < 4; i++)
         if (data[i] != that.data[i]) return false;
     return true;
 }
 
-bool IPv6::operator!=(const IPv6 &that) {
+bool IPv6::operator!=(const IPv6 &that) const {
     for (int i = 0; i < 4; i++)
         if (data[i] != that.data[i]) return true;
     return false;
 }
 
-bool IPv6::operator>(const IPv6 &that) {
+bool IPv6::operator>(const IPv6 &that) const {
     for (int i = 0; i < 4; i++)
         if (data[i] > that.data[i]) return true;
         else if (data[i] < that.data[i]) return false;
     return false;
 }
 
-bool IPv6::operator<(const IPv6 &that) {
+bool IPv6::operator<(const IPv6 &that) const {
     for (int i = 0; i < 4; i++)
         if (data[i] < that.data[i]) return true;
         else if (data[i] > that.data[i]) return false;
     return false;
 }
 
-bool IPv6::operator>=(const IPv6 &that) {
+bool IPv6::operator>=(const IPv6 &that) const {
     for (int i = 0; i < 4; i++)
         if (data[i] > that.data[i]) return true;
         else if (data[i] < that.data[i]) return false;
     return true;
 }
 
-bool IPv6::operator<=(const IPv6 &that) {
+bool IPv6::operator<=(const IPv6 &that) const {
     for (int i = 0; i < 4; i++)
         if (data[i] < that.data[i]) return true;
         else if (data[i] > that.data[i]) return false;

@@ -20,23 +20,26 @@ public:
 
     explicit MAC(std::string);
 
+    //return data as bits array
     std::vector<bool> asBits() const override;
 
+    //return stored data as string in appropriate form using parser
     std::string asString() const override;
 
+    //return data as IPv6 object
     IPv6 asIPv6() const override;
 
-    bool operator==(const MAC &);
+    bool operator==(const MAC &) const;
 
-    bool operator!=(const MAC &);
+    bool operator!=(const MAC &) const;
 
-    bool operator>(const MAC &);
+    bool operator>(const MAC &) const;
 
-    bool operator<(const MAC &);
+    bool operator<(const MAC &) const;
 
-    bool operator>=(const MAC &);
+    bool operator>=(const MAC &) const;
 
-    bool operator<=(const MAC &);
+    bool operator<=(const MAC &) const;
 
     MAC &operator=(const MAC &);
 };

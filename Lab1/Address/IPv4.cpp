@@ -30,27 +30,27 @@ IPv6 IPv4::asIPv6() const {
     return IPv6(res);
 }
 
-bool IPv4::operator==(const IPv4 &that) {
+bool IPv4::operator==(const IPv4 &that) const {
     return data == that.data;
 }
 
-bool IPv4::operator!=(const IPv4 &that) {
+bool IPv4::operator!=(const IPv4 &that) const {
     return data != that.data;
 }
 
-bool IPv4::operator>(const IPv4 &that) {
+bool IPv4::operator>(const IPv4 &that) const {
     return data > that.data;
 }
 
-bool IPv4::operator<(const IPv4 &that) {
+bool IPv4::operator<(const IPv4 &that) const {
     return data < that.data;
 }
 
-bool IPv4::operator>=(const IPv4 &that) {
+bool IPv4::operator>=(const IPv4 &that) const {
     return data >= that.data;
 }
 
-bool IPv4::operator<=(const IPv4 &that) {
+bool IPv4::operator<=(const IPv4 &that) const {
     return data <= that.data;
 }
 
