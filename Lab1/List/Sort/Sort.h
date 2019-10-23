@@ -8,17 +8,21 @@
 
 #include "../Iterator.h"
 
-template <typename T>
-static bool compare(const T& a, const T& b){
-    return a>=b;
+//Base comparator
+template<typename T>
+static bool compare(const T &a, const T &b) {
+    return a >= b;
 }
 
-template <typename T>
+//Abstract sort class
+//Contains pure virtual method sort
+//Custom sorting algorithms should override sort method
+template<typename T>
 class Sort {
 public:
-    virtual void sort(Iterator<T> begin, Iterator<T> end, bool(*compar)(const T&, const T&)) = 0;
+    virtual void sort(Iterator<T> begin, Iterator<T> end, bool(*compar)(const T &, const T &)) = 0;
 
-    void sort(Iterator<T> begin, Iterator<T> end){
+    void sort(Iterator<T> begin, Iterator<T> end) {
         sort(begin, end, &compare);
     }
 };

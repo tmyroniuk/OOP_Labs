@@ -7,12 +7,14 @@
 
 #include "Sort.h"
 
+//Class with insertion sort algorithm
 template <typename T>
 class InsertionSort : public Sort<T> {
 public:
     void sort(Iterator<T> begin, Iterator<T> end, bool(*compar)(const T &, const T &));
 };
 
+//Insertion sort algorithm to override sort method
 template<typename T>
 void InsertionSort<T>::sort(Iterator <T> begin, Iterator <T> end, bool (*compar)(const T &, const T &)) {
     for(auto i=begin; i!=end; i++){

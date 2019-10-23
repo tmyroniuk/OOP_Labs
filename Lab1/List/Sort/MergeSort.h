@@ -8,6 +8,7 @@
 #include "Sort.h"
 #include "../Vector.h"
 
+//Class with merge sort algorithm
 template <typename T>
 class MergeSort : public Sort<T> {
     void merge(Iterator<T> begin, Iterator<T> med, Iterator<T> end, bool(*compar)(const T &, const T &));
@@ -15,6 +16,8 @@ public:
     void sort(Iterator<T> begin, Iterator<T> end, bool(*compar)(const T &, const T &));
 };
 
+//Merge sort algorithm
+//Override sort method
 template <typename T>
 void MergeSort<T>::sort(Iterator<T> begin, Iterator<T> end, bool (*compar)(const T &, const T &)) {
     if (begin == end) return;
