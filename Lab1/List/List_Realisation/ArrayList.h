@@ -1,73 +1,167 @@
-//
-// Created by tmyro on 14.10.2019.
-//
+/**
+ * @file ArrayList.h
+ * @brief ArrayList class header
+ */
 
 #ifndef LISTS_ARRAYLIST_H
 #define LISTS_ARRAYLIST_H
 
 #include "ListRealisation.h"
 
-//realisation of array-based list
+/**
+ * Realisation of array list.
+ *
+ * Realisation of list which stores nodes in the array. Supports
+ * random access.
+ *
+ * @tparam T Type of elements in the list.
+ */
 template<typename T>
 class ArrayList : public ListRealisation<T> {
 public:
-    //Implements Node-iterator for array-base list
-    //Behaves as node and as iterator over itself
+    /**
+     * Implementation of node and iterator over array list
+     *
+     * Behaves as node and iterator in ArrayList. Overrides methods
+     * of NodeIterator class to work with array list.
+     */
     class Node : public NodeIterator<T> {
     public:
-        //default ctor
+        /**
+         * Default ctor.
+         *
+         * Creates empty node.
+         */
         Node();
 
-        Node(T _val);
+        /**
+         * Constructor, takes value as argument.
+         *
+         * Creates node with stored value _val.
+         *
+         * @param _val Value stored in node.
+         */
+        explicit Node(T _val);
 
-        //return pointer to previous node
+        /**
+         * Returns previous node in the list.
+         *
+         * @return Pointer to the previous node.
+         */
         NodeIterator<T> *getPrev();
 
-        //return pointer to next node
+        /**
+         * Returns next node in the list.
+         *
+         * @return Pointer to the next node.
+         */
         NodeIterator<T> *getNext();
 
-        //return pointer to node <count> positions after this
+        /**
+         * Returns node that is <count> positions after this node.
+         *
+         * @param count positions forward to move.
+         *
+         * @return Node <count> positions after this.
+         */
         NodeIterator<T> *forward(int count);
 
-        //return pointer to node <count> positions before this
+       /**
+        * Returns node that is <count> positions before this node.
+        *
+        * @param count positions backward to move.
+        *
+        * @return Node <count> positions after this.
+        */
         NodeIterator<T> *backward(int count);
 
-        //does nothing. Cannot use =delete
-        void setPrev(NodeIterator<T> *to) {};
+        /**
+         * Does nothing for this realisation.
+         * @param to
+         */
+        virtual void setPrev(NodeIterator<T> *to) {}
 
-        //does nothing. Cannot use =delete
-        void setNext(NodeIterator<T> *to) {};
+        /**
+         * Does nothing for this realisation.
+         * @param to
+         */
+        virtual void setNext(NodeIterator<T> *to) {}
     };
 
-    //default ctor
+    /**
+     * Default constructor.
+     *
+     * Creates empty array list (with only tail element).
+     */
     ArrayList();
 
-    //insert node with <data> before <pos> node
+    /**
+     * Inserts element before <pos>.
+     *
+     * Inserts new node with given data before node, pointer to which is given.
+     *
+     * @param pos Position to insert.
+     * @param data New element value.
+     */
     void insert(NodeIterator<T> *pos, T data);
 
-    //return data pd <pos> node and removes it
+    /**
+     * Removes the node which pointer is given from the list and return its value.
+     *
+     * @param pos Pointer to the node to remove.
+     * @return Removed node value.
+     */
     T extract(NodeIterator<T> *pos);
 
-    //return pointer to head
+    /**
+     * Returns pointer to the first element of the list.
+     *
+     * @return Pointer to the head of the list.
+     */
     NodeIterator<T> *begin();
 
-    //return pointer to tail (head + size)
+    /**
+     * Returns element to the tail of the list.
+     *
+     * Equal to:
+     *  node_ptr = realisation.begin() + realisation.size();
+     * @return
+     */
     NodeIterator<T> *end();
 
+    /**
+     * Destructor.
+     *
+     * Deletes the array of elements.
+     * Does NOT delete raw pointers stored in list.
+     */
     ~ArrayList();
 
 private:
-    //reserved memory increasement int in times
+
+    /**
+     * Times the array is increased when it overflows.
+     */
     const unsigned int grow_rate;
-    //head ptr
+
+    /**
+     * Pointer to the head of the list.
+     */
     NodeIterator<T> *head;
-    //memory reserved
+
+    /**
+     * Current size of the array.
+     */
     unsigned int reserved;
 
-    //reserve more memory
+    /**
+     * Increases array size in <grow_rate> times.
+     */
     void grow();
 
-    //release memory on empty
+    /**
+     * If list is empty releases memory.
+     */
     void shrink();
 };
 

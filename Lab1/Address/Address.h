@@ -12,35 +12,79 @@
 
 class IPv6;
 
-//abstract class to store address
+/**
+ * Base class to store address.
+ *
+ * Implements interface for class storing address in one of supported
+ * formats.
+ */
 class Address {
 public:
-    //type of address
+    /**
+     * Enum of types
+     */
     enum Type {
         IPv6_t, IPv4_t, MAC_t
     };
 
-    explicit Address(uint8_t, Type);
+    /**
+     * Constructor
+     * @param _size Address size in bits.
+     * @param _type Type of address stored.
+     */
+    explicit Address(uint8_t _size, Type _type);
 
-    //return stored data as bit vector
+    /**
+     * Represents stored address as bit vector.
+     *
+     * Creates bool vector which represents stored address as bits. Bool
+     * vector is chosen because it is memory-optimized and easy to store and
+     * process.
+     *
+     * @return Bool vector
+     */
     virtual std::vector<bool> asBits() const = 0;
 
-    //return stored data as string in appropriate form using parser
+    /**
+     * Represents stored data as string.
+     *
+     * Uses parser to convert stored data to string
+     * in appropriate form.
+     *
+     * @return Address as string.
+     */
     virtual std::string asString() const = 0;
 
-    //return address as IPv6 object
+    /**
+     * Convert address into IPv6 object.
+     *
+     * @return IPv6 object storing this address.
+     */
     virtual IPv6 asIPv6() const = 0;
 
-    //return address type
+    /**
+     * Returns type of address stored.
+     *
+     * @return type of address stored.
+     */
     Type getType() const;
 
-    //return size in bits
+    /**
+     * Returns address size in bits.
+     *
+     * @return address size in bits.
+     */
     uint8_t getSize() const;
 
 protected:
-    //size in bits
+    /**
+     * Size in bits.
+     */
     uint8_t size;
-    //type of stored data
+
+    /**
+     * Type of the address stored.
+     */
     Type type;
 };
 

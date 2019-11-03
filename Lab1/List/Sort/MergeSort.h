@@ -6,38 +6,67 @@
 #define LAB1_MERGESORT_H
 
 #include "Sort.h"
+
 #include "../Vector.h"
 
-//Class with merge sort algorithm
+/**
+ * Realises merge sort algorithm.
+ *
+ * Overrides the sort method of Sort class with merge sort.
+ *
+ * @tparam T Type of elements sorted.
+ */
 template <typename T>
 class MergeSort : public Sort<T> {
-    void merge(Iterator<T> begin, Iterator<T> med, Iterator<T> end, bool(*compar)(const T &, const T &));
+
+    /**
+     * Recursive function of merge sort algorithm.
+     *
+     * Called by sort() method. Divides list into two and recursively sort them
+     * and merges sorted parts.
+     *
+     * @param begin Iterator to the begin of the range.
+     * @param med Iterator to the median of the range.
+     * @param end Iterator to the end of the range.
+     * @param comparator Custom comparator.
+     */
+    void merge(Iterator<T> begin, Iterator<T> med, Iterator<T> end, bool(*comparator)(const T &, const T &));
+
 public:
-    void sort(Iterator<T> begin, Iterator<T> end, bool(*compar)(const T &, const T &));
+
+    /**
+     * Sorts elements in range [begin, end) using custom comparator.
+     *
+     * Sorts elements in range [begin, end) via merge sort. Custom
+     * comparator is a bool function equal to (first >= second).
+     *
+     * @param begin Iterator to the begin of the range.
+     * @param end Iterator to the tail of the range.
+     * @param comparator Custom comparator.
+     */
+    void sort(Iterator<T> begin, Iterator<T> end, bool(*comparator)(const T &, const T &));
 };
 
-//Merge sort algorithm
-//Override sort method
 template <typename T>
-void MergeSort<T>::sort(Iterator<T> begin, Iterator<T> end, bool (*compar)(const T &, const T &)) {
+void MergeSort<T>::sort(Iterator<T> begin, Iterator<T> end, bool (*comparator)(const T &, const T &)) {
     if (begin == end) return;
     int len = 0;
     for (auto i = begin; i != end; len++, i++);
     auto med = begin + (len/2);
     if(len>1) {
-        sort(begin, med, compar);
-        sort(med, end, compar);
+        sort(begin, med, comparator);
+        sort(med, end, comparator);
     }
-    merge(begin, med, end, compar);
+    merge(begin, med, end, comparator);
 }
 
 template<typename T>
-void MergeSort<T>::merge(Iterator<T> begin, Iterator<T> med, Iterator<T> end, bool (*compar)(const T &, const T &)) {
+void MergeSort<T>::merge(Iterator<T> begin, Iterator<T> med, Iterator<T> end, bool (*comparator)(const T &, const T &)) {
     auto i = begin;
     auto j = med;
     Vector<T> res;
     for(auto k = begin; k!=end; k++){
-        if(j==end || (i!=med && (*compar)(*j, *i))){
+        if(j==end || (i!=med && (*comparator)(*j, *i))){
             res.push_back(*i);
             i++;
         }

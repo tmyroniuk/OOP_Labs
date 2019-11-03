@@ -7,11 +7,25 @@
 
 #include "BaseList.h"
 
-//implements BaseList with LinkedList realisation
+/**
+ * Implements linked list.
+ *
+ * BaseList with LinkedList realisation. Iterators over this are safe to use after an
+ * element is inserted or removed.
+ *
+ * @tparam T Type of elements in the list.
+ */
 template<typename T>
 class List : public BaseList<T> {
+
 public:
-    //ctor set realisation to LinkedList
+
+    /**
+     * Default constructor.
+     *
+     * Creates List from BaseList constructor and LinkedList object as a
+     * parameter.
+     */
     List();
 };
 

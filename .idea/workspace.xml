@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="16a2e96d-12a0-4052-886f-11442ac418a8" name="Default Changelist" comment="Added to master branch:&#10;BaseList&#10;List&#10;Vector&#10;Iterator&#10;List_Realisation\ArrayList&#10;List_Realisation\LinkedList&#10;List_Realisation\ListRealisation&#10;List_Realisation\NodeIterator">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/List/List_Realisation/ArrayList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/List/List_Realisation/ArrayList.h" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -11,5 +28,61 @@
   <component name="ProjectId" id="1Srtw5RQ7VocdByOV8rc8jv6103" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lab1" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16a2e96d-12a0-4052-886f-11442ac418a8" name="Default Changelist" comment="" />
+      <created>1572333777260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572333777260</updated>
+      <workItem from="1572333778333" duration="1892000" />
+      <workItem from="1572337100330" duration="17000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added to master branch:&#10;BaseList&#10;List&#10;Vector&#10;Iterator&#10;List_Realisation\ArrayList&#10;List_Realisation\LinkedList&#10;List_Realisation\ListRealisation&#10;List_Realisation\NodeIterator">
+      <created>1572334059417</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572334059418</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added to master branch:&#10;BaseList&#10;List&#10;Vector&#10;Iterator&#10;List_Realisation\ArrayList&#10;List_Realisation\LinkedList&#10;List_Realisation\ListRealisation&#10;List_Realisation\NodeIterator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to master branch:&#10;BaseList&#10;List&#10;Vector&#10;Iterator&#10;List_Realisation\ArrayList&#10;List_Realisation\LinkedList&#10;List_Realisation\ListRealisation&#10;List_Realisation\NodeIterator" />
   </component>
 </project>

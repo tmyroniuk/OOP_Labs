@@ -4,7 +4,6 @@
 
 #include "ListRealisation.h"
 
-//should be used with "new NodIterator<T>(inherited)"
 template<typename T>
 ListRealisation<T>::ListRealisation() : len(0) {}
 

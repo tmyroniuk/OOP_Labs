@@ -7,30 +7,62 @@
 
 #include "NodeIterator.h"
 
-//implements ListRealisation as LinkedList
+/**
+ * Base class for
+ * @tparam T Type of elements stored.
+ */
 template<typename T>
 class ListRealisation {
 protected:
-    //elements in list
+
+    /**
+     * Amount of elements in the list.
+     */
     unsigned int len;
 
-    //default ctor
+public:
+
+    /**
+     * Default constructor.
+     */
     explicit ListRealisation();
 
-public:
-    //inserts <data> before <pos>
+    /*
+     * Inserts new element with given value before given position.
+     *
+     * @param pos Insertion position.
+     * @param data New element value.
+     */
     virtual void insert(NodeIterator<T> *pos, T data) = 0;
 
-    //return data on <pos> and delete it
+    /**
+     * Removes element on given position from the list, returns its value.
+     *
+     * @param pos Pointer to the node removed.
+     *
+     * @return Removed element value.
+     */
     virtual T extract(NodeIterator<T> *pos) = 0;
 
-    //return head ptr
+    /**
+     * Returns pointer to the first element.
+     *
+     * @return Pointer to the head.
+     */
     virtual NodeIterator<T> *begin() = 0;
 
-    //return tail ptr
+    /**
+     * Returns pointer to the list tail.
+     *
+     * @return Pointer to the head.
+     */
     virtual NodeIterator<T> *end() = 0;
 
-    //return amount of elements in list
+    /**
+     * Returns amount of elements in the list.
+     *
+     * @return List len.
+     */
     unsigned int size();
 
     virtual ~ListRealisation() = default;

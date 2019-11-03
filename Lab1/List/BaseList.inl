@@ -87,8 +87,8 @@ void BaseList<T>::sort() {
 }
 
 template<typename T>
-void BaseList<T>::sort(bool (*compar)(const T &, const T &)) {
-    sorting_algo->sort(begin(), end(), compar);
+void BaseList<T>::sort(bool (*comparator)(const T &, const T &)) {
+    sorting_algo->sort(begin(), end(), comparator);
 }
 
 template<typename T>

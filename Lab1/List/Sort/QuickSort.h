@@ -7,10 +7,27 @@
 
 #include "Sort.h"
 
-//Class with quick sort algorithm
+/**
+ * Realises insertion sort algorithm.
+ *
+ * Overrides the sort method of Sort class with insertion sort.
+ *
+ * @tparam T Type of elements sorted.
+ */
 template<typename T>
 class QuickSort : public Sort<T> {
 public:
+
+    /**
+     * Sorts elements in range [begin, end) using custom comparator.
+     *
+     * Sorts elements in range [begin, end) via quick sort (Hoare's algorithm is used).
+     * Custom comparator is a bool function equal to (first >= second).
+     *
+     * @param begin Iterator to the begin of the range.
+     * @param end Iterator to the tail of the range.
+     * @param comparator Custom comparator.
+     */
     void sort(Iterator<T> begin, Iterator<T> end, bool(*compar)(const T &, const T &));
 };
 

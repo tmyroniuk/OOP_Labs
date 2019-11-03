@@ -7,16 +7,32 @@
 
 #include "Sort.h"
 
-//Class with insertion sort algorithm
+/**
+ * Realises insertion sort algorithm.
+ *
+ * Overrides the sort method of Sort class with insertion sort.
+ *
+ * @tparam T Type of elements sorted.
+ */
 template <typename T>
 class InsertionSort : public Sort<T> {
 public:
-    void sort(Iterator<T> begin, Iterator<T> end, bool(*compar)(const T &, const T &));
+    /**
+     * Sorts elements in range [begin, end) using custom comparator.
+     *
+     * Sorts elements in range [begin, end) via insertion sort. Custom
+     * comparator is a bool function equal to (first >= second).
+     *
+     * @param begin Iterator to the begin of the range.
+     * @param end Iterator to the tail of the range.
+     * @param comparator Custom comparator.
+     */
+    void sort(Iterator<T> begin, Iterator<T> end, bool(*comparator)(const T &, const T &));
 };
 
-//Insertion sort algorithm to override sort method
+
 template<typename T>
-void InsertionSort<T>::sort(Iterator <T> begin, Iterator <T> end, bool (*compar)(const T &, const T &)) {
+void InsertionSort<T>::sort(Iterator <T> begin, Iterator <T> end, bool (*comparator)(const T &, const T &)) {
     for(auto i=begin; i!=end; i++){
         auto j = i;
         T temp = *i;
