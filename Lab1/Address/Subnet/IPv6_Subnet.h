@@ -9,14 +9,37 @@
 #include "../IPv6.h"
 #include "Subnet.h"
 
-//implements subnet with IPv6 address object
+/**
+ * Implements subnet of IPv6 addresses in CIDR notation.
+ *
+ * Subnet stores an address in IPv6 form forms and a number of
+ * leading bits in subnet mask.
+ */
 class IPv6_Subnet : public Subnet {
 public:
+    /**
+     * Default constructor. Creates empty subnet.
+     */
     IPv6_Subnet();
 
-    explicit IPv6_Subnet(const std::string &);
+    /**
+     * Constructor which takes string as parameter.
+     *
+     * Uses parser to construct IPv6 subnet in CIDR notation from string. String
+     * should contain address in IPv6 CIDR notation:
+     * b1.b2.b3.b4.b5.b6.b7.b8/bits, where 0000 <= bi <= ffff and bits <= 255.
+     *
+     * @param string Subnet in CIDR notation.
+     */
+    explicit IPv6_Subnet(const std::string & string);
 
-    IPv6_Subnet(const IPv6 &, uint8_t);
+    /**
+     * Constructor that takes base address and mask bits as parameter.
+     *
+     * @param _address Base address of subnet in CIDR notation.
+     * @param _bits Number of mask leading bits.
+     */
+    IPv6_Subnet(const IPv6 &_address, uint8_t _bits);
 };
 
 

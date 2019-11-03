@@ -4,10 +4,6 @@
 
 #include "Subnet.h"
 
-uint8_t Subnet::get_bits() {
-    return bits;
-}
-
 bool Subnet::contains(const Address &_address) {
     auto first = address->asBits();
     auto second = _address.asBits();

@@ -8,16 +8,35 @@
 
 #include "Parser.h"
 
-//contain methods to parse IPv4 address
+/**
+ * Contain methods to parse IPv4 address.
+ */
 class IPv4_Parser : Parser {
 public:
-    //convert string block 999.999.999.999 to uint32
+    /**
+     * Parses IPv4 address into uint32.
+     *
+     * Converts IPv4 address in text form into uint32 using parser.
+     *
+     * @param string IPv4 address in text form.
+     * @return Address as uint32.
+     */
     uint32_t dataFromString(const std::string &string);
 
-    //convert 32 bit data to bit array
+    /**
+     * Converts 32 bits to bool vector.
+     *
+     * @param data 32 bits data as uint32 field.
+     * @return Bool vector representing 32 bit data in bit form.
+     */
     std::vector<bool> asBits(uint32_t data);
 
-    //convert 32 bit data to string in IPv4 form
+    /**
+     * Parses 32 bit data into IPv4 address text form.
+     *
+     * @param data 32 bits data as uint32 field.
+     * @return IPv4 address in text form.
+     */
     std::string asString(uint32_t data);
 };
 

@@ -15,13 +15,13 @@ class IPv6;
 /**
  * Base class to store address.
  *
- * Implements interface for class storing address in one of supported
+ * Implements interface for class which stores address in one of supported
  * formats.
  */
 class Address {
 public:
     /**
-     * Enum of types
+     * Enum of supported address formats.
      */
     enum Type {
         IPv6_t, IPv4_t, MAC_t
@@ -76,15 +76,12 @@ public:
      */
     uint8_t getSize() const;
 
+    virtual ~Address() = default;
 protected:
-    /**
-     * Size in bits.
-     */
+    ///Size in bits.
     uint8_t size;
 
-    /**
-     * Type of the address stored.
-     */
+    ///Type of the address stored.
     Type type;
 };
 

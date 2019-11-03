@@ -8,28 +8,55 @@
 
 #include "../Address.h"
 
-//abstract class. Contains subnet in CIDR notation
+/**
+ * Base class for subnet in CIDR notation.
+ *
+ * Subnet stores an address in one of supported forms and a number of
+ * leading bits in subnet mask.
+ */
 class Subnet {
 protected:
-    //return position of '/' in string
-    static int sub_parser(const std::string &);
+    /**
+     * Finds position of the first '/' symbol in given string.
+     *
+     * Used to parse CIDR notation subnet from string.
+     *
+     * @param string string containing '/' symbol.
+     * @return position of '/' symbol in string.
+     */
+    static int sub_parser(const std::string &string);
 
-    //base address
+    ///Base address.
     Address *address;
-    //mask bits
+
+    ///Number of leading bits.
     uint8_t bits;
 public:
+    /**
+     * Default constructor. Creates empty Subnet object.
+     */
     Subnet();
 
-    Subnet(Address *, uint8_t);
+    /**
+     * Constructor with base address and mask bits as parameters.
+     *
+     * @param _address Base address in CIDR notation.
+     * @param _bits Number of leading bits in subnet mask.
+     */
+    Subnet(Address *_address, uint8_t _bits);
 
-    //return true if subnet contain <_address>
+    /**
+     * Checks if the subnet contains given address.
+     *
+     * @param _address Address checked.
+     * @return If subnet contains the address.
+     */
     bool contains(const Address &_address);
 
-    //return bits amount
-    uint8_t get_bits();
-
-    //return type of address
+    /**
+     * Returns type of addresses the subnet contains.
+     * @return Type of base address.
+     */
     Address::Type type();
 
     ~Subnet();
