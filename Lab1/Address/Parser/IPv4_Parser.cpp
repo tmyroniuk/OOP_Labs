@@ -4,6 +4,11 @@
 
 #include "IPv4_Parser.h"
 
+/*
+ * Used as parser for IPv4 address.
+ * Reads numbers divided by '.' symbol, each less than 256, and converts
+ * them into one uint32.
+ */
 uint32_t IPv4_Parser::dataFromString(const std::string &string) {
     uint32_t i = 0, res = 0;
     std::string temp;
@@ -20,10 +25,17 @@ uint32_t IPv4_Parser::dataFromString(const std::string &string) {
     return res;
 }
 
+/*
+ * Just use same function in parent class with 32 bit vector size.
+ */
 std::vector<bool> IPv4_Parser::asBits(uint32_t data) {
     return intToBits(data, 32);
 }
 
+/*
+ * Converts int32 into IPv4 address computing rest division by
+ * 256.
+ */
 std::string IPv4_Parser::asString(uint32_t data) {
     std::string res;
     for (int i = 0; i < 4; i++) {

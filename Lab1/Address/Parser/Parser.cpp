@@ -3,8 +3,10 @@
 //
 
 #include "Parser.h"
-//
 
+/*
+ * Converts uint32 into binary number in form of bool vector.
+ */
 std::vector<bool> Parser::intToBits(uint32_t data, uint8_t bits) {
     std::vector<bool> res;
     res.reserve(bits);
@@ -16,6 +18,9 @@ std::vector<bool> Parser::intToBits(uint32_t data, uint8_t bits) {
     return res;
 }
 
+/*
+ * Parsing string with hex number into uint32.
+ */
 uint32_t Parser::hexToInt(const std::string &data) {
     uint32_t res = 0;
     for (uint8_t i = 0; i < data.length(); i++) {
@@ -29,6 +34,9 @@ uint32_t Parser::hexToInt(const std::string &data) {
     return res;
 }
 
+/*
+ * Converts uint32 number into hex stored in string.
+ */
 std::string Parser::intToHex(uint32_t data) {
     std::string res;
     int temp;

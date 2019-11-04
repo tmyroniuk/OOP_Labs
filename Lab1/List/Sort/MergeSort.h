@@ -16,14 +16,13 @@
  *
  * @tparam T Type of elements sorted.
  */
-template <typename T>
+template<typename T>
 class MergeSort : public Sort<T> {
 
     /**
-     * Recursive function of merge sort algorithm.
+     * Additional function for merge sort algorithm.
      *
-     * Called by sort() method. Divides list into two and recursively sort them
-     * and merges sorted parts.
+     * Called by sort() method. Merges two sorted ranges into one.
      *
      * @param begin Iterator to the begin of the range.
      * @param med Iterator to the median of the range.
@@ -47,36 +46,44 @@ public:
     void sort(Iterator<T> begin, Iterator<T> end, bool(*comparator)(const T &, const T &));
 };
 
-template <typename T>
+/*
+ * Recursive merge sort function which uses comparator as >= and merge function
+ * to merge two sorted ranges.
+ */
+template<typename T>
 void MergeSort<T>::sort(Iterator<T> begin, Iterator<T> end, bool (*comparator)(const T &, const T &)) {
     if (begin == end) return;
     int len = 0;
     for (auto i = begin; i != end; len++, i++);
-    auto med = begin + (len/2);
-    if(len>1) {
+    auto med = begin + (len / 2);
+    if (len > 1) {
         sort(begin, med, comparator);
         sort(med, end, comparator);
     }
     merge(begin, med, end, comparator);
 }
 
+/*
+ * Merges sorted ranges [begin, med) and [med, end) into sorted range
+ * [begin, end) using Vector as additional memory.
+ */
 template<typename T>
-void MergeSort<T>::merge(Iterator<T> begin, Iterator<T> med, Iterator<T> end, bool (*comparator)(const T &, const T &)) {
+void
+MergeSort<T>::merge(Iterator<T> begin, Iterator<T> med, Iterator<T> end, bool (*comparator)(const T &, const T &)) {
     auto i = begin;
     auto j = med;
     Vector<T> res;
-    for(auto k = begin; k!=end; k++){
-        if(j==end || (i!=med && (*comparator)(*j, *i))){
+    for (auto k = begin; k != end; k++) {
+        if (j == end || (i != med && (*comparator)(*j, *i))) {
             res.push_back(*i);
             i++;
-        }
-        else {
+        } else {
             res.push_back(*j);
             j++;
         }
     }
     i = begin;
-    for(unsigned int k=0; k<res.size(); k++, i++) *i = res[k];
+    for (unsigned int k = 0; k < res.size(); k++, i++) *i = res[k];
 }
 
 #endif //LAB1_MERGESORT_H

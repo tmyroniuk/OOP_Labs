@@ -31,7 +31,10 @@ public:
     void sort(Iterator<T> begin, Iterator<T> end, bool(*compar)(const T &, const T &));
 };
 
-//Quick sort algorithm to override method sort
+/*
+ * Sorts list in range [begin, end) using qsort algorithm and
+ * Hoare division.
+ */
 template<typename T>
 void QuickSort<T>::sort(Iterator<T> begin, Iterator<T> end, bool (*compar)(const T &, const T &)) {
     if (begin == end) return;

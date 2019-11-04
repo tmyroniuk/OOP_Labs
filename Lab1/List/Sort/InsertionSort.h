@@ -30,7 +30,10 @@ public:
     void sort(Iterator<T> begin, Iterator<T> end, bool(*comparator)(const T &, const T &));
 };
 
-
+/*
+ * Basic insertion sort algorithm, which sorts array
+ * in range [begin, end) using comparator as >= function.
+ */
 template<typename T>
 void InsertionSort<T>::sort(Iterator <T> begin, Iterator <T> end, bool (*comparator)(const T &, const T &)) {
     for(auto i=begin; i!=end; i++){
