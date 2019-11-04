@@ -1,7 +1,9 @@
-//
-// Created by tmyro on 20.10.2019.
-//
-
+/**
+ * @file MAC_Parser.h
+ * @author tmyroniuk
+ * @date 20.10.2019
+ * @brief Contains declaration of MAC_Parser class.
+ */
 #ifndef ADDRESS_MAC_PARSER_H
 #define ADDRESS_MAC_PARSER_H
 

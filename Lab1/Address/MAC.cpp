@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 20.10.2019.
-//
+/**
+ * @file MAC.cpp
+ * @author tmyroniuk
+ * @date 20.10.2019
+ * @brief Contains definitions of MAC class methods.
+ */
 
 #include "MAC.h"
 

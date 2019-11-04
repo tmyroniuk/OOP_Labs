@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 13.10.2019.
-//
+/**
+ * @file ListRealisation.h
+ * @author tmyroniuk
+ * @date 13.10.2019
+ * @brief Contains declaration of ListRealisation class.
+ */
 
 #ifndef LISTS_LISTREALISATION_H
 #define LISTS_LISTREALISATION_H

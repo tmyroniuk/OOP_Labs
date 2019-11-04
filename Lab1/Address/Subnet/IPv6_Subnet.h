@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 20.10.2019.
-//
+/**
+ * @file IPv6_Subnet.h
+ * @author tmyroniuk
+ * @date 20.10.2019
+ * @brief Contains declaration of IPv6_Subnet class.
+ */
 
 #ifndef ADDRESS_IPV6_SUBNET_H
 #define ADDRESS_IPV6_SUBNET_H

@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 13.10.2019.
-//
+/**
+ * @file NodeIterator.h
+ * @author tmyroniuk
+ * @date 13.10.2019
+ * @brief Contains declaration of nodeIterator class.
+ */
 
 #ifndef LISTS_NODEITERATOR_H
 #define LISTS_NODEITERATOR_H

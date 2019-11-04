@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 16.10.2019.
-//
+/**
+ * @file IPv4.cpp
+ * @author tmyroniuk
+ * @date 16.10.2019
+ * @brief Contains definitions of IPv4 class methods.
+ */
 
 #include "IPv4.h"
 

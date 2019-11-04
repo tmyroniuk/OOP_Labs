@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 22.10.2019.
-//
+/**
+ * @file InsertionSort.h
+ * @author tmyroniuk
+ * @date 22.10.2019
+ * @brief Contains declaration and definition of InsertionSort class.
+ */
 
 #ifndef LAB1_INSERTIONSORT_H
 #define LAB1_INSERTIONSORT_H

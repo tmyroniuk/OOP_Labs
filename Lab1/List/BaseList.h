@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 13.10.2019.
-//
+/**
+ * @file BaseList.h
+ * @author tmyroniuk
+ * @date 14.10.2019
+ * @brief Contains declaration of BaseList class.
+ */
 
 #ifndef LISTS_BASELIST_H
 #define LISTS_BASELIST_H

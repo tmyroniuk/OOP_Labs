@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 14.10.2019.
-//
+/**
+ * @file ArrayList.inl
+ * @author tmyroniuk
+ * @date 14.10.2019
+ * @brief Contains definition of ArrayList class methods.
+ */
 
 #include "ArrayList.h"
 

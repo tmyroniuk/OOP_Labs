@@ -1,6 +1,8 @@
 /**
  * @file ArrayList.h
- * @brief ArrayList class header
+ * @author tmyroniuk
+ * @date 14.10.2019
+ * @brief Contains declaration of ArrayList class.
  */
 
 #ifndef LISTS_ARRAYLIST_H

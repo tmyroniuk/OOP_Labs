@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 20.10.2019.
-//
+/**
+ * @file Subnet.cpp
+ * @author tmyroniuk
+ * @date 20.10.2019
+ * @brief Contains definitions of Subnet class methods.
+ */
 
 #include "Subnet.h"
 

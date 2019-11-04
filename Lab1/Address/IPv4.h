@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 16.10.2019.
-//
+/**
+ * @file IPv4.h
+ * @author tmyroniuk
+ * @date 16.10.2019
+ * @brief Contains declaration of IPv4 class.
+ */
 
 #ifndef ADDRESS_IPV4_H
 #define ADDRESS_IPV4_H

@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 20.10.2019.
-//
+/**
+ * @file MAC.h
+ * @author tmyroniuk
+ * @date 20.10.2019
+ * @brief Contains declaration of MAC class.
+ */
 
 #ifndef ADDRESS_MAC_H
 #define ADDRESS_MAC_H

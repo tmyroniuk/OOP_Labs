@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 20.10.2019.
-//
+/**
+ * @file IPv6_Parser.cpp
+ * @author tmyroniuk
+ * @date 20.10.2019
+ * @brief Contains definitions of IPv6_Parser class methods.
+ */
 
 #include "IPv6_Parser.h"
 

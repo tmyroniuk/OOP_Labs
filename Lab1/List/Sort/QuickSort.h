@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 22.10.2019.
-//
+/**
+ * @file QuickSort.h
+ * @author tmyroniuk
+ * @date 22.10.2019
+ * @brief Contains declaration and definition of QuickSort class.
+ */
 
 #ifndef LAB1_QUICKSORT_H
 #define LAB1_QUICKSORT_H

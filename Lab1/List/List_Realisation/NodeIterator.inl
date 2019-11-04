@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 13.10.2019.
-//
+/**
+ * @file NodeIterator.inl
+ * @author tmyroniuk
+ * @date 13.10.2019
+ * @brief Contains definition of NodeIterator class methods.
+ */
 
 #include "NodeIterator.h"
 

@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 20.10.2019.
-//
+/**
+ * @file Subnet.h
+ * @author tmyroniuk
+ * @date 20.10.2019
+ * @brief Contains declaration of Subnet class.
+ */
 
 #ifndef ADDRESS_SUBNET_H
 #define ADDRESS_SUBNET_H

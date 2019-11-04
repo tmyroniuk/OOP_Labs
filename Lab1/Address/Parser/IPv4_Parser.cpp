@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 20.10.2019.
-//
+/**
+ * @file IPv4_Parser.cpp
+ * @author tmyroniuk
+ * @date 20.10.2019
+ * @brief Contains definitions of IPv4_Parser class methods.
+ */
 
 #include "IPv4_Parser.h"
 

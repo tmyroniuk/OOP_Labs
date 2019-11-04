@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 22.10.2019.
-//
+/**
+ * @file MergeSort.h
+ * @author tmyroniuk
+ * @date 22.10.2019
+ * @brief Contains declaration and definition of MergeSort class.
+ */
 
 #ifndef LAB1_MERGESORT_H
 #define LAB1_MERGESORT_H

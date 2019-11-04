@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 15.10.2019.
-//
+/**
+ * @file Iterator.inl
+ * @author tmyroniuk
+ * @date 15.10.2019
+ * @brief Contains definition of Iterator class methods.
+ */
 
 #include "Iterator.h"
 

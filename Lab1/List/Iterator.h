@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 15.10.2019.
-//
+/**
+ * @file Iterator.h
+ * @author tmyroniuk
+ * @date 15.10.2019
+ * @brief Contains declaration of Iterator class.
+ */
 
 #ifndef LISTS_ITERATOR_H
 #define LISTS_ITERATOR_H

@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 13.10.2019.
-//
+/**
+ * @file BaseList.inl
+ * @author tmyroniuk
+ * @date 13.10.2019
+ * @brief Contains definition of BaseList class methods.
+ */
 
 #include "BaseList.h"
 #include "List_Realisation/LinkedList.h"

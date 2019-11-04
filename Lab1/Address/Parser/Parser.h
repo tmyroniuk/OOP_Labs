@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 16.10.2019.
-//
+/**
+ * @file Parser.h
+ * @author tmyroniuk
+ * @date 20.10.2019
+ * @brief Contains declaration of Parser class.
+ */
 
 #ifndef ADDRESS_PARSER_H
 #define ADDRESS_PARSER_H

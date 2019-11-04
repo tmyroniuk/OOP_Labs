@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 21.10.2019.
-//
+/**
+ * @file Sort.h
+ * @author tmyroniuk
+ * @date 21.10.2019
+ * @brief Contains declaration and definition of Sort class and default comparator.
+ */
 
 #ifndef LAB1_SORT_H
 #define LAB1_SORT_H

@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 13.10.2019.
-//
+/**
+ * @file LinkedList.h
+ * @author tmyroniuk
+ * @date 13.10.2019
+ * @brief Contains declaration of LinkedList class.
+ */
 
 #ifndef LISTS_LINKEDLIST_H
 #define LISTS_LINKEDLIST_H

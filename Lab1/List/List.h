@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 15.10.2019.
-//
+/**
+ * @file List.h
+ * @author tmyroniuk
+ * @date 15.10.2019
+ * @brief Contains declaration of List class.
+ */
 
 #ifndef LISTS_LIST_H
 #define LISTS_LIST_H

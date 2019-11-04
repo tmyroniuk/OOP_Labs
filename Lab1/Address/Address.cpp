@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 16.10.2019.
-//
+/**
+ * @file Address.cpp
+ * @author tmyroniuk
+ * @date 16.10.2019
+ * @brief Contains definitions of Address class methods.
+ */
 
 #include "Address.h"
 

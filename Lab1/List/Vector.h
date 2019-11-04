@@ -1,6 +1,9 @@
-//
-// Created by tmyro on 15.10.2019.
-//
+/**
+ * @file Vector.h
+ * @author tmyroniuk
+ * @date 15.10.2019
+ * @brief Contains declaration of Vector class.
+ */
 
 #ifndef LISTS_VECTOR_H
 #define LISTS_VECTOR_H
