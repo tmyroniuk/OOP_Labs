@@ -3,7 +3,7 @@
 #include "Address/IPv4.h"
 #include "List/List.h"
 
-//Custom reverse sorting algorithm (rev bubble sort)
+//Custom reverse sorting algorithm (rev bubble sort).
 class BubbleSort:public Sort<IPv4>{
 public:
     void sort(Iterator<IPv4> begin, Iterator<IPv4> end, bool(*comp)(const IPv4&, const IPv4&)){
@@ -15,6 +15,7 @@ public:
     }
 };
 
+//Custom comparator.
 bool customComparator(const int& a, const int& b){
     return a<=b;
 }
