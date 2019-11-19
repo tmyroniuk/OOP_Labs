@@ -81,7 +81,7 @@ BaseList<T>::~BaseList() {
 
 template<typename T>
 bool BaseList<T>::empty() {
-    return len == 0;
+    return realisation->size() == 0;
 }
 
 template<typename T>

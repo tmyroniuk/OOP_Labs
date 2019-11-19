@@ -62,6 +62,13 @@ public:
      */
     Address::Type type();
 
+    /**
+     * Converts subnet into string in CIDR notation.
+     *
+     * @return Subnet as string.
+     */
+    std::string asString();
+
     ~Subnet();
 };
 

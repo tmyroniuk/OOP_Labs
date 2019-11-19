@@ -42,7 +42,7 @@ void InsertionSort<T>::sort(Iterator <T> begin, Iterator <T> end, bool (*compara
     for(auto i=begin; i!=end; i++){
         auto j = i;
         T temp = *i;
-        while(j != begin && (*compar)(*(j-1), temp)){
+        while(j != begin && (*comparator)(*(j-1), temp)){
             *j = *(j-1);
             j--;
         }

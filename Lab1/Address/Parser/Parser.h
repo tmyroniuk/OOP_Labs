@@ -19,7 +19,7 @@
  * Contain methods to parse address from string.
  */
 class Parser {
-protected:
+public:
     /**
      * Convert uint32 number into bool vector specified size.
      *

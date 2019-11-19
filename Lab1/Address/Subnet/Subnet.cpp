@@ -10,8 +10,8 @@
 bool Subnet::contains(const Address &_address) {
     auto first = address->asBits();
     auto second = _address.asBits();
-    uint8_t i = 0;
-    while (i < first.size() - bits) {
+    int i = 0;
+    while (i < first.size() - bits && i < second.size() - bits) {
         if (first[i] != second[i])
             return false;
         i++;
@@ -35,4 +35,10 @@ int Subnet::sub_parser(const std::string &string) {
 
 Subnet::~Subnet() {
     delete address;
+}
+
+std::string Subnet::asString() {
+    std::string res;
+    res+=address->asString() + "/" + std::to_string(bits);
+    return res;
 }
