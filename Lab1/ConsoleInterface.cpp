@@ -89,13 +89,13 @@ template <>
 void ConsoleInterface<std::string>::print(const std::string &val, bool) { std::cout<<val<<" "; }
 
 template <>
-void ConsoleInterface<IPv4>::print(const IPv4 &val, bool spec) { std::cout<<val.asString()<<" "; }
+void ConsoleInterface<IPv4>::print(const IPv4 &val, bool spec) { std::cout<< ((spec) ? val.asIPv6().asString() : val.asString()) <<" "; }
 
 template <>
-void ConsoleInterface<MAC>::print(const MAC &val, bool spec) { std::cout<<val.asString()<<" "; }
+void ConsoleInterface<MAC>::print(const MAC &val, bool spec) { std::cout<< ((spec) ? val.asIPv6().asString() : val.asString()) <<" "; }
 
 template <>
-void ConsoleInterface<IPv6>::print(const IPv6 &val, bool spec) { std::cout<<val.asString()<<" "; }
+void ConsoleInterface<IPv6>::print(const IPv6 &val, bool spec) { std::cout<< ((spec) ? val.asIPv6().asString() : val.asString()) <<" "; }
 
 template<>
 void ConsoleInterface<IPv4>::inSubnet(std::string &str) {

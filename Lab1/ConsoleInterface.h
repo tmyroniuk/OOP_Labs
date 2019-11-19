@@ -244,11 +244,11 @@ void ConsoleInterface<T>::parse(std::string str) {
                     break;
                 }
                 temp_str = extractWord(str);
-                if (temp_str == "all") for (auto i : *list) print(i);
+                if (temp_str == "all") for (auto i : *list) (extractWord(str)=="IPv6") ? print(i, true) : print(i);
                 else {
                     index = std::stoi(temp_str);
                     if (index < 0 || index >= list->size()) std::cout << "Wrong index.";
-                    else print(*(list->begin() + index));
+                    else (extractWord(str)=="IPv6") ? print(*(list->begin() + index), true) : print(*(list->begin() + index));
                 }
                 std::cout << "\n";
                 break;
