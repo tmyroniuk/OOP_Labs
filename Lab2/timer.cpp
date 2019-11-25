@@ -23,8 +23,8 @@ QString Timer::getNote(){
     return _note;
 }
 
-bool Timer::isActive(){
-    return _timer->isActive();
+bool Timer::repeated(){
+    return false;
 }
 
 Timer::TimerType Timer::type(){

@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     _model = new ImprovisedModel(ui->listWidget);
+    connect(_model, SIGNAL(timeout(Timer*)), this, SLOT(timerNotify(Timer*)));
+
     ui->comboBox->addItem("All");
     ui->comboBox->addItem("Timers");
     ui->comboBox->addItem("Alarms");
@@ -68,4 +70,15 @@ void MainWindow::on_comboBox_currentIndexChanged(int index)
         _model->shownItems(Timer::alarm_t);
         break;
     }
+}
+
+void MainWindow::timerNotify(Timer* timer){
+    if(! ui->checkBox->isChecked()){
+        QString file;
+        if(timer->type()==Timer::timer_t) file = "C:/Projects/OOP_Labs/Lab2/Sounds/Alarm01.wav";
+        else file = "C:/Projects/OOP_Labs/Lab2/Sounds/Ring07.wav";
+        TimerNotification msg(timer->getName(), timer->getNote(), file, this);
+        msg.exec();
+    }
+    _model->removeItem(timer);
 }

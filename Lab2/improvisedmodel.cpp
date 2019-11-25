@@ -15,12 +15,19 @@ void ImprovisedModel::addItem(Timer* timer){
     _widget->addItem(item);
 
     _list->append(timer);
-    connect(timer, SIGNAL(timeout(Timer*)), this, SLOT(onTimerTimeout(Timer*)));
+    connect(timer, SIGNAL(timeout(Timer*)), this, SIGNAL(timeout(Timer*)));
 }
 
 void ImprovisedModel::removeItem(int id){
     delete _list->takeAt(id);
     _widget->takeItem(id);
+}
+
+void ImprovisedModel::removeItem(Timer* timer){
+    int j = 0;
+    auto i = _list->begin();
+    for(; i!=_list->end() && (*i)!=timer; i++, j++);
+    if(i!=_list->end() && !(*i)->repeated()) removeItem(j);
 }
 
 void ImprovisedModel::shownItems(Timer::TimerType type){
@@ -45,10 +52,4 @@ ImprovisedModel::~ImprovisedModel(){
     for(auto i = _list->begin(); i!=_list->end(); i++)
         delete *i;
     delete _list;
-}
-
-void ImprovisedModel::onTimerTimeout(Timer* timer){
-    int j = 0;
-    for(auto i = _list->begin(); i!=_list->end() && *i!=timer; i++, j++);
-    removeItem(j);
 }

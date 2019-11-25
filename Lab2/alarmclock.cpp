@@ -21,3 +21,7 @@ void AlarmClock::onTimeout(){
 QString AlarmClock::displayedString(){
     return _timeout_date.time().toString("hh:mm:ss");
 }
+
+bool AlarmClock::repeated(){
+    return _daily;
+}

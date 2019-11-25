@@ -13,6 +13,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
+find_package(Qt5Multimedia REQUIRED)
+
 add_executable(Lab2
   main.cpp
   mainwindow.cpp
@@ -33,6 +35,10 @@ add_executable(Lab2
   alarmdialog.cpp
   alarmdialog.ui
   icons.qrc
+  Dialogs/timernotification.h
+  Dialogs/timernotification.cpp
+  Dialogs/timernotification.ui
 )
 
 target_link_libraries(Lab2 PRIVATE Qt5::Widgets)
+target_link_libraries(Lab2 PRIVATE Qt5::Multimedia)
