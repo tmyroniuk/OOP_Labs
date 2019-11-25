@@ -6,15 +6,15 @@
 
 #include <QList>
 #include <QListWidget>
-#include <QDebug>
 
 class ImprovisedModel: public QObject{
     Q_OBJECT
 
 public:
     ImprovisedModel(QListWidget* widget);
-    void addItem(Timer* item);
+    void addItem(Timer* timer);
     void removeItem(int id);
+    void shownItems(Timer::TimerType type);
     QString getTimerString(int id);
     QString getInfo(int id);
     ~ImprovisedModel();

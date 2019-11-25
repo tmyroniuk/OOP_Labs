@@ -3,6 +3,7 @@
 
 #include "timerclock.h"
 
+#include <QPushButton>
 #include <QDialog>
 
 namespace Ui {
@@ -19,6 +20,8 @@ public:
 
 private slots:
     void on_buttonBox_accepted();
+
+    void on_lineEdit_textEdited(const QString &arg1);
 
 private:
     TimerClock*& _res;

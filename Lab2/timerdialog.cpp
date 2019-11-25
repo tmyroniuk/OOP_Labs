@@ -7,17 +7,18 @@ TimerDialog::TimerDialog(TimerClock*& res, QWidget *parent) :
     ui(new Ui::TimerDialog)
 {
     ui->setupUi(this);
-    ui->hourBox->addItem("hh");
-    ui->minBox->addItem("mm");
-    ui->secBox->addItem("ss");
-    QStringList options;
-    for(int i = 0; i<60; i++)
-        options<<((i<10)? QString("0") : QString("")).append(QString::number(i));
-    ui->secBox->addItems(options);
-    ui->minBox->addItems(options);
-    for(int i = 60; i<100; i++)
-        options<<QString::number(i);
-    ui->hourBox->addItems(options);
+
+    for(int i = 0; i<100; i++){
+        ui->hourBox->addItem(QString((i<10)? "0" : "").append(QString::number(i)).append(" hours"));
+    }
+    for(int i = 0; i<60; i++){
+        ui->minBox->addItem(QString((i<10)? "0" : "").append(QString::number(i)).append(" min"));
+    }
+    for(int i = 0; i<60; i++){
+        ui->secBox->addItem(QString((i<10)? "0" : "").append(QString::number(i)).append(" sec"));
+    }
+
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 }
 
 TimerDialog::~TimerDialog()
@@ -27,10 +28,14 @@ TimerDialog::~TimerDialog()
 
 void TimerDialog::on_buttonBox_accepted()
 {
-    if(! ui->hourBox->currentIndex() * ui->minBox->currentIndex() * ui->secBox->currentIndex() == 0){
-        int temp = (ui->hourBox->currentIndex()-1) * 3600000;
-        temp += (ui->minBox->currentIndex()-1) * 60000;
-        temp += (ui->secBox->currentIndex()-1) * 1000;
-        _res = new TimerClock(ui->lineEdit->text(), ui->textEdit->toPlainText(), std::chrono::milliseconds(temp));
-    }
+    int temp = (ui->hourBox->currentIndex()) * 3600000;
+    temp += (ui->minBox->currentIndex()) * 60000;
+    temp += (ui->secBox->currentIndex()) * 1000;
+    _res = new TimerClock(ui->lineEdit->text(), ui->textEdit->toPlainText(), std::chrono::milliseconds(temp));
+}
+
+void TimerDialog::on_lineEdit_textEdited(const QString &arg1)
+{
+    if(arg1=="") ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
+    else ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
 }

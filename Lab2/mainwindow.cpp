@@ -9,7 +9,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     _model = new ImprovisedModel(ui->listWidget);
-    startTimer(1000, Qt::PreciseTimer);
+    ui->comboBox->addItem("All");
+    ui->comboBox->addItem("Timers");
+    ui->comboBox->addItem("Alarms");
+
+    QTimer::singleShot(1000 - QTime::currentTime().msec(), this, SLOT(timer_start()));
 }
 
 MainWindow::~MainWindow()
@@ -23,7 +27,6 @@ void MainWindow::on_add_timer_button_clicked()
     TimerClock* data = nullptr;
     TimerDialog dialog(data, this);
     dialog.exec();
-    qDebug()<<((data)? "1" : "0");
     if(data) _model->addItem(data);
 }
 
@@ -32,7 +35,6 @@ void MainWindow::on_add_alarm_button_clicked()
     AlarmClock* data = nullptr;
     AlarmDialog dialog(data, this);
     dialog.exec();
-    qDebug()<<((data)? "1" : "0");
     if(data) _model->addItem(data);
 }
 
@@ -40,17 +42,30 @@ void MainWindow::on_listWidget_currentRowChanged(int currentRow)
 {
     if(currentRow == -1) ui->label->clear();
     else ui->label->setText(_model->getInfo(currentRow));
+    timerEvent(nullptr);
 }
 
 void MainWindow::timerEvent(QTimerEvent*){
-    timer_update();
+    if(ui->listWidget->currentRow() == -1) ui->timer_label->clear();
+    else ui->timer_label->setText(_model->getTimerString(ui->listWidget->currentRow()));
 }
 
-void MainWindow::timer_update()
+void MainWindow::timer_start()
 {
-    if(ui->listWidget->currentRow() < 0) ui->timer_label->hide();
-    else {
-        ui->timer_label->setText(_model->getTimerString(ui->listWidget->currentRow()));
-        ui->timer_label->show();
+    startTimer(1000, Qt::PreciseTimer);
+}
+
+void MainWindow::on_comboBox_currentIndexChanged(int index)
+{
+    switch (index) {
+    case 0:
+        _model->shownItems(Timer::other_t);
+        break;
+    case 1:
+        _model->shownItems(Timer::timer_t);
+        break;
+    case 2:
+        _model->shownItems(Timer::alarm_t);
+        break;
     }
 }

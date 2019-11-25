@@ -9,7 +9,7 @@ class Timer : public QObject {
     Q_OBJECT
 
 public:
-    enum TimerType{timer_t, alarm_t};
+    enum TimerType{other_t, timer_t, alarm_t};
 
     Timer(QString name, QString note, TimerType type);
     QString getName();

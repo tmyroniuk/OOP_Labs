@@ -32,6 +32,7 @@ add_executable(Lab2
   alarmdialog.h
   alarmdialog.cpp
   alarmdialog.ui
+  icons.qrc
 )
 
 target_link_libraries(Lab2 PRIVATE Qt5::Widgets)

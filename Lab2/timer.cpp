@@ -36,14 +36,16 @@ QString Timer::displayedString(){
     QString res;
 
     long long num = std::chrono::floor<std::chrono::hours>(temp).count();
-    res.append(QString::number(num).append(':'));
+    res.append((num<10)? QString("0") : QString("")).append(QString::number(num));
     temp -= std::chrono::hours(num);
 
     num = std::chrono::floor<std::chrono::minutes>(temp).count();
-    res.append(QString::number(num).append(':'));
+    res.append((num<10)? QString(":0") : QString(":")).append(QString::number(num));
     temp -= std::chrono::minutes(num);
 
-    res.append(QString::number(std::chrono::floor<std::chrono::seconds>(temp).count()));
+    num = std::chrono::round<std::chrono::seconds>(temp).count();
+    res.append((num<10)? QString(":0") : QString(":")).append(QString::number(num));
+
     return res;
 }
 

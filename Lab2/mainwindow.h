@@ -4,7 +4,6 @@
 #include "improvisedmodel.h"
 
 #include <QMainWindow>
-#include <QDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,7 +27,9 @@ private slots:
 
     void on_listWidget_currentRowChanged(int currentRow);
 
-    void timer_update();
+    void timer_start();
+
+    void on_comboBox_currentIndexChanged(int index);
 
 private:
     ImprovisedModel *_model;
