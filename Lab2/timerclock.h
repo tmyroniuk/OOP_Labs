@@ -1,11 +1,11 @@
 #ifndef TIMERCLOCK_H
 #define TIMERCLOCK_H
 
+#include "timer.h"
 
-class TimerClock : public Timer
-{
+class TimerClock : public Timer{
 public:
-    TimerClock();
+    TimerClock(QString name, QString note, std::chrono::milliseconds duration);
 };
 
 #endif // TIMERCLOCK_H
