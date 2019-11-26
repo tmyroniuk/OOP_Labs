@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     _model = new ImprovisedModel(ui->listWidget);
     connect(_model, SIGNAL(timeout(Timer*)), this, SLOT(timerNotify(Timer*)));
+    _model->load();
 
     ui->comboBox->addItem("All");
     ui->comboBox->addItem("Timers");
@@ -21,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    _model->save();
     delete _model;
 }
 
@@ -81,4 +83,9 @@ void MainWindow::timerNotify(Timer* timer){
         msg.exec();
     }
     _model->removeItem(timer);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    if(ui->listWidget->currentRow()>=0) _model->removeItem(ui->listWidget->currentRow());
 }

@@ -1,8 +1,6 @@
 <RCC>
     <qresource prefix="/res">
-        <file>AlarmIcon32.png</file>
         <file>AlarmIcon64.png</file>
-        <file>TimerIcon32.png</file>
         <file>TimerIcon64.png</file>
     </qresource>
 </RCC>

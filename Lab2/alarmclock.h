@@ -34,6 +34,8 @@ public:
      */
     bool repeated() override;
 
+    int asNum() override;
+
 protected slots:
     /**
      * Triggers timeout signal.

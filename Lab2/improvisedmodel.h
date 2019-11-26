@@ -6,6 +6,7 @@
 
 #include <QList>
 #include <QListWidget>
+#include <QTextStream>
 
 /**
  * Class which acts as model between QListWidget and QList of Timers.
@@ -67,6 +68,9 @@ public:
      * @return timer as string.
      */
     QString getInfo(int id);
+
+    void save();
+    void load();
 
     ~ImprovisedModel();
 signals:

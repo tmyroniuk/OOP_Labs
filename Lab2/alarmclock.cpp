@@ -22,6 +22,10 @@ QString AlarmClock::displayedString(){
     return _timeout_date.time().toString("hh:mm:ss");
 }
 
+int AlarmClock::asNum(){
+    return _timeout_date.time().msecsSinceStartOfDay();
+}
+
 bool AlarmClock::repeated(){
     return _daily;
 }

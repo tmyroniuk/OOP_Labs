@@ -49,6 +49,10 @@ QString Timer::displayedString(){
     return res;
 }
 
+int Timer::asNum(){
+    return _timer->remainingTime();
+}
+
 void Timer::onTimeout(){
     emit timeout(this);
 }

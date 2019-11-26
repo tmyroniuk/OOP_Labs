@@ -48,6 +48,49 @@ QString ImprovisedModel::getInfo(int id){
     return res;
 }
 
+void ImprovisedModel::save(){
+    QFile qfile("save.txt");
+    if (qfile.open(QIODevice::WriteOnly)) {
+        QTextStream out(&qfile);
+        for(auto i = _list->begin(); i!=_list->end(); i++){
+            out<<(*i)->getName().toUtf8()<<'\n';
+            out<<(*i)->getNote().toUtf8()<<'\n';
+            out<<QString::number((*i)->type()).toUtf8()<<'\n';
+            out<<QString::number((*i)->asNum()).toUtf8()<<'\n';
+            out<<QString::number((*i)->repeated()).toUtf8()<<'\n';
+        }
+        qfile.close();
+    }
+}
+
+void ImprovisedModel::load(){
+    QFile qfile("save.txt");
+    if (qfile.open(QIODevice::ReadOnly)) {
+        QString name, note, type, time, repeated;
+        int msec;
+        QDateTime date_time;
+        QTextStream in(&qfile);
+        while(!in.atEnd()){
+            name = in.readLine();
+            note = in.readLine();
+            type = in.readLine();
+            time = in.readLine();
+            repeated = in.readLine();
+            msec = time.toInt();
+            if(type.toInt()==Timer::timer_t){
+                addItem(new TimerClock(name, note, std::chrono::milliseconds(msec)));
+            }
+            else{
+                date_time = QDateTime::currentDateTime();
+                date_time.setTime(QTime().addMSecs(msec));
+                if(date_time<=QDateTime::currentDateTime()) date_time = date_time.addDays(1);
+                addItem(new AlarmClock(name, note, date_time, repeated.toInt()));
+            }
+        }
+        qfile.close();
+    }
+}
+
 ImprovisedModel::~ImprovisedModel(){
     for(auto i = _list->begin(); i!=_list->end(); i++)
         delete *i;

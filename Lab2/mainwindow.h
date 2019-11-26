@@ -68,6 +68,8 @@ private slots:
      * @param timer the timer finished.
      */
     void timerNotify(Timer* timer);
+    void on_pushButton_clicked();
+
 private:
     ImprovisedModel *_model;
     Ui::MainWindow *ui;

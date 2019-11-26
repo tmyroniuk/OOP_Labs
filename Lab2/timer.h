@@ -59,6 +59,8 @@ public:
      */
     virtual QString displayedString();
 
+    virtual int asNum();
+
     virtual ~Timer();
 signals:
     /**
