@@ -85,6 +85,9 @@ private:
      */
     void inSubnet(std::string& str);
 
+    /**
+     * Prints command list and description.
+     */
     void help();
 public:
     /**
@@ -320,7 +323,7 @@ void ConsoleInterface<T>::help() {
              "<comp>:\n\t\t(Ignored): Default comparator.\n\t\tcustom: Reverse comparator.\n\n\n"<<
              "set_algo <name> \n\tChanges current list sorting algo."<<"\n\t"<<"<name>:\n\t\t"<<
              "merge: Merge sort.\n\t\tqsort: Quick sort\n\t\tinsertion: Insertion sort\n\t\tcustom: Bubble sort\n\n\n"<<
-             "in_subnet <subnet>\n\tChecks which of the addresses in list are in given subnet.\n\n\n";
+             "in_subnet <n> <subnet>\n\tChecks if addresses number <n> in list is in given subnet.\n\n\n";
 
 }
 
