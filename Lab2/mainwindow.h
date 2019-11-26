@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include "improvisedmodel.h"
-#include "Dialogs/timernotification.h"
+#include "timernotification.h"
 
 #include <QMainWindow>
 

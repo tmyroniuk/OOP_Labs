@@ -1,8 +1,8 @@
 #ifndef IMPROVISEDMODEL_H
 #define IMPROVISEDMODEL_H
 
-#include <timerclock.h>
-#include <alarmclock.h>
+#include "Timers/timerclock.h"
+#include "Timers/alarmclock.h"
 
 #include <QList>
 #include <QListWidget>
@@ -69,7 +69,14 @@ public:
      */
     QString getInfo(int id);
 
+    /**
+     * Saves timers in list to the save.txt file.
+     */
     void save();
+
+    /**
+     * Loads timers list from saves.txt file.
+     */
     void load();
 
     ~ImprovisedModel();

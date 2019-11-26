@@ -6,9 +6,9 @@ void ImprovisedModel::addItem(Timer* timer){
 
     QListWidgetItem* item;
     if(timer->type() == Timer::alarm_t)
-        item = new QListWidgetItem(QIcon(":/res/AlarmIcon64.png"), timer->getName());
+        item = new QListWidgetItem(QIcon(":/res/Icons/AlarmIcon64.png"), timer->getName());
     else
-        item = new QListWidgetItem(QIcon(":/res/TimerIcon64.png"), timer->getName());
+        item = new QListWidgetItem(QIcon(":/res/Icons/TimerIcon64.png"), timer->getName());
     item->setBackground(Qt::gray);
     item->setForeground(QColor("#FFA500"));
     item->setFont(QFont("Helvetica", 16));

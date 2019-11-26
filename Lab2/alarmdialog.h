@@ -1,7 +1,7 @@
 #ifndef ALARMDIALOG_H
 #define ALARMDIALOG_H
 
-#include "alarmclock.h"
+#include "Timers/alarmclock.h"
 
 #include <QPushButton>
 #include <QDialog>

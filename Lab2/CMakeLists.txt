@@ -20,24 +20,24 @@ add_executable(Lab2
   mainwindow.cpp
   mainwindow.h
   mainwindow.ui
-  timer.h
-  timer.cpp
-  timerclock.h
-  timerclock.cpp
-  alarmclock.h
-  alarmclock.cpp
+        Timers/timer.h
+        Timers/timer.cpp
+        Timers/timerclock.h
+        Timers/timerclock.cpp
+        Timers/alarmclock.h
+        Timers/alarmclock.cpp
   improvisedmodel.h
   improvisedmodel.cpp
-  timerdialog.h
-  timerdialog.cpp
-  timerdialog.ui
+        Dialog/timerdialog.h
+        Dialog/timerdialog.cpp
+        Dialog/timerdialog.ui
   alarmdialog.h
   alarmdialog.cpp
   alarmdialog.ui
   icons.qrc
-  Dialogs/timernotification.h
-  Dialogs/timernotification.cpp
-  Dialogs/timernotification.ui
+        timernotification.h
+        timernotification.cpp
+        timernotification.ui
 )
 
 target_link_libraries(Lab2 PRIVATE Qt5::Widgets)

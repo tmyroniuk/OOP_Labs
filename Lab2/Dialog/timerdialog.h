@@ -1,7 +1,7 @@
 #ifndef TIMERDIALOG_H
 #define TIMERDIALOG_H
 
-#include "timerclock.h"
+#include "../Timers/timerclock.h"
 
 #include <QPushButton>
 #include <QDialog>
