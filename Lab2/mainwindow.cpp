@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "Dialog/timerdialog.h"
-#include "alarmdialog.h"
+#include "Dialog/alarmdialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),

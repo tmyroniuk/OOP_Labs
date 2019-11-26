@@ -79,8 +79,7 @@ color: #d0d0d0;</string>
         <property name="styleSheet">
          <string notr="true">background: #3E3F40;
 color: #d0d0d0;
-padding: 2px;
-section-color: #d0d0d0;</string>
+padding: 2px;</string>
         </property>
         <property name="maxVisibleItems">
          <number>24</number>

@@ -31,9 +31,9 @@ add_executable(Lab2
         Dialog/timerdialog.h
         Dialog/timerdialog.cpp
         Dialog/timerdialog.ui
-  alarmdialog.h
-  alarmdialog.cpp
-  alarmdialog.ui
+        Dialog/alarmdialog.h
+        Dialog/alarmdialog.cpp
+        Dialog/alarmdialog.ui
   icons.qrc
         timernotification.h
         timernotification.cpp
