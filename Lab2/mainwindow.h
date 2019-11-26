@@ -26,6 +26,9 @@ public:
      */
     MainWindow(QWidget *parent = nullptr);
 
+    /**
+     * Saves model.
+     */
     ~MainWindow();
 protected:
     /**

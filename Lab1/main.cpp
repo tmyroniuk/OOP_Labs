@@ -18,6 +18,7 @@ bool run(){
 int main() {
     std::string str;
     bool running = true;
+    std::cout<<"Type \"help\" to get command list.\n";
     while(running && std::getline(std::cin, str)){
         switch (hash(str.c_str())) {
             case hash("int"):
@@ -40,6 +41,9 @@ int main() {
                 break;
             case hash("exit"):
                 running = false;
+                break;
+            case hash("help"):
+                std::cout<<"Choose type:\n\tint\n\tdouble\n\tstring\n\tIPv4\n\tIPv6\n\tMAC\nOr type \"exit\" to finish\n\n";
                 break;
             default:
                 std::cout << "Unknown type.\n";

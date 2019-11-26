@@ -84,6 +84,8 @@ private:
      *  and the second is the address in string form.
      */
     void inSubnet(std::string& str);
+
+    void help();
 public:
     /**
      * Creates console interface without a list..
@@ -144,7 +146,7 @@ void ConsoleInterface<T>::parse(std::string str) {
     if (!list) {
         switch (hash(extractWord(str).c_str())) {
             //Creates Vector list.
-            case hash("Vector"):
+            case hash("ArrayList"):
                 list = new Vector<T>;
                 temp_str = extractWord(str);
                 index = (temp_str.empty()) ? 0 : std::stoi(temp_str);
@@ -152,7 +154,7 @@ void ConsoleInterface<T>::parse(std::string str) {
                     list->push_back(rand_val());
                 break;
             //Creates linked list.
-            case hash("List"):
+            case hash("LinkedList"):
                 list = new List<T>;
                 temp_str = extractWord(str);
                 index = (temp_str.empty()) ? 0 : std::stoi(temp_str);
@@ -160,7 +162,7 @@ void ConsoleInterface<T>::parse(std::string str) {
                     list->push_back(rand_val());
                 break;
             //Creates LibVector list.
-            case hash("LibVector"):
+            case hash("VectorList"):
                 list = new LibVector<T>;
                 temp_str = extractWord(str);
                 index = (temp_str.empty()) ? 0 : std::stoi(temp_str);
@@ -175,7 +177,7 @@ void ConsoleInterface<T>::parse(std::string str) {
     else{
         switch (hash(extractWord(str).c_str())) {
             //Replaces list with vector.
-            case hash("Vector"):
+            case hash("ArrayList"):
                 delete list;
                 list = new Vector<T>;
                 temp_str = extractWord(str);
@@ -184,7 +186,7 @@ void ConsoleInterface<T>::parse(std::string str) {
                     list->push_back(rand_val());
                 break;
             //Replaces list with List.
-            case hash("List"):
+            case hash("LinkedList"):
                 delete list;
                 list = new List<T>;
                 temp_str = extractWord(str);
@@ -193,7 +195,7 @@ void ConsoleInterface<T>::parse(std::string str) {
                     list->push_back(rand_val());
                 break;
             //Replaces list with LibVector.
-            case hash("LibVector"):
+            case hash("VectorList"):
                 delete list;
                 list = new LibVector<T>;
                 temp_str = extractWord(str);
@@ -285,25 +287,41 @@ void ConsoleInterface<T>::parse(std::string str) {
                 inSubnet(str);
                 break;
             case hash("help"):
-                std::cout<<"*  Vector [n]\n"<<
-                           "*  List [n]\n"<<
-                           "*  LibVector [n]\n"<<
-                           "*  push_back [<val>]\n"<<
-                           "*  pop_back\n"<<
-                           "*  push_front [<val>]\n"<<
-                           "*  pop_front\n"<<
-                           "*  insert index <val>\n"<<
-                           "*  remove index\n"<<
-                           "*  size\n"<<
-                           "*  print [n]\n"<<
-                           "*  sort [comp]\n"<<
-                           "*  set_algo <algo_name (merge, quick, insertion)>\n"<<
-                           "*  in_subnet <subnet_name>\n";
+                help();
                 break;
             default:
                 std::cout << "Unknown command.\n";
         }
     }
+}
+
+template <typename T>
+void ConsoleInterface<T>::help() {
+    std::cout<<"\n\n"<<
+             "ArrayList [n]\n\tChange current list to Array List filled with n random values.\n\t"<<
+             "n Can be ignored. In this case empty list is created."<<"\n\n\n"<<
+             "LinkedList [n]\n\tChange current list to Linked List filled with n random values.\n\t"<<
+             "n Can be ignored. In this case empty list is created."<<"\n\n\n"<<
+             "VectorList [n]\n\tChange current list to Vector List filled with n random values.\n\t"<<
+             "n Can be ignored. In this case empty list is created."<<"\n\n\n"<<
+             "push_back [<val>]\n\tAdds new element in the end of the list. If <val> is given\n\t"<<
+             "takes it as new value, otherwise adds a random value."<<"\n\n\n"<<
+             "push_front [<val>]\n\tAdds new element in the front of the list. If <val> is given\n\t"<<
+             "takes it as new value, otherwise adds a random value."<<"\n\n\n"<<
+             "pop_back \n\tRemoves the last element in current list."<<"\n\n\n"<<
+             "pop_front \n\tRemoves the first element in current list."<<"\n\n\n"<<
+             "insert <index> [<val>] \n\tInserts the element in current list on the given index.\n\t"<<
+             "If value - <val> is given, inserts it, otherwise uses random value."<<"\n\n\n"<<
+             "remove <index> \n\tRemoves the element on the <index> in current list."<<"\n\n\n"<<
+             "size \n\tPrints current size of the list"<<"\n\n\n"<<
+             "print <index> \n\tPrints element on the given index in current list."<<"\n\n\n"<<
+             "print all \n\tPrints all elements in current list in a row."<<"\n\n\n"<<
+             "sort [<comp>] \n\tSorts list with current algorithm and given comparator."<<"\n\t"<<
+             "<comp>:\n\t\t(Ignored): Default comparator.\n\t\tcustom: Reverse comparator.\n\n\n"<<
+             "set_algo <name> \n\tChanges current list sorting algo."<<"\n\t"<<"<name>:\n\t\t"<<
+             "merge: Merge sort.\n\t\tqsort: Quick sort\n\t\tinsertion: Insertion sort\n\t\tcustom: Bubble sort\n\n\n"<<
+             "in_subnet <subnet>\n\tChecks which of the addresses in list are in given subnet.\n\n\n";
+
 }
 
 #endif //LAB1_CONSOLEINTERFACE_H
