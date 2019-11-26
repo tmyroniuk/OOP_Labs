@@ -9,7 +9,7 @@
 
 MAC_Parser MAC::parser;
 
-MAC::MAC() : Address(48, MAC_t), data() {}`
+MAC::MAC() : Address(48, MAC_t), data() {}
 
 MAC::MAC(const MAC &_that) : Address(48, MAC_t) {
     for (int i = 0; i < 3; i++)
