@@ -1,4 +1,5 @@
 #include "alarmclock.h"
+#include <QDebug>
 
 AlarmClock::AlarmClock(QString name, QString note, QDateTime timeout_date, bool daily) :
     Timer(name, note, alarm_t),
@@ -23,6 +24,7 @@ QString AlarmClock::displayedString(){
 }
 
 int AlarmClock::asNum(){
+    qDebug()<<_timeout_date.time().msecsSinceStartOfDay();
     return _timeout_date.time().msecsSinceStartOfDay();
 }
 

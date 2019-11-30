@@ -8,7 +8,9 @@
 /**
  * Class that provides interface for different timers.
  *
- * Contains timer, name, note, can save itself.
+ * Contains the QTimer object, timer name, note.
+ * The timeout(Timer*) signal is emitted on timeout.
+ * The timer should be connected to onTimeout slot in subclass constructor.
  */
 class Timer : public QObject {
     Q_OBJECT
@@ -92,12 +94,8 @@ protected:
 
     QString _name;
     QString _note;
-
-    /**
-     * The Qt timer class which is used for time measuring.
-     */
-    QTimer* _timer;
-    TimerType _type;
+    QTimer* _timer;//*The Qt timer class which is used for time measuring.
+    TimerType _type;//*Type of the timer.
 };
 
 #endif // TIMER_H

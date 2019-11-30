@@ -5,6 +5,9 @@
 
 /**
  * The timer which triggers in exact time.
+ *
+ * Can be created with QDateTime object as exact time it will timeout.
+ * Has daily feature which restarts timer when timeout.
  */
 class AlarmClock : public Timer{
 public:
@@ -42,8 +45,8 @@ protected slots:
      */
     void onTimeout() override;
 protected:
-    QDateTime _timeout_date;
-    bool _daily;
+    QDateTime _timeout_date; //*Exact timeout date.
+    bool _daily; //*If timer should be repeated.
 };
 
 #endif // ALARMCLOCK_H

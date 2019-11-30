@@ -82,7 +82,7 @@ color: #d0d0d0;
 padding: 2px;</string>
         </property>
         <property name="maxVisibleItems">
-         <number>24</number>
+         <number>12</number>
         </property>
        </widget>
       </item>
@@ -104,6 +104,9 @@ padding: 2px;</string>
 color: #d0d0d0;
 padding: 2px;
 </string>
+        </property>
+        <property name="maxVisibleItems">
+         <number>12</number>
         </property>
        </widget>
       </item>

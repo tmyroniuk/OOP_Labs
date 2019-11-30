@@ -12,6 +12,8 @@ class TimerDialog;
 
 /**
  * Class that provides dialog for timer creation.
+ *
+ * Takes empty TimerClock ptr and creates the timer on it.
  */
 class TimerDialog : public QDialog
 {

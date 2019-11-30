@@ -117,6 +117,9 @@ color: #d0d0d0;
 selection-background-color: lightgray;
 </string>
         </property>
+        <property name="maxVisibleItems">
+         <number>12</number>
+        </property>
        </widget>
       </item>
       <item>
@@ -137,6 +140,9 @@ selection-background-color: lightgray;
 color: #d0d0d0;
 selection-background-color: lightgray;</string>
         </property>
+        <property name="maxVisibleItems">
+         <number>12</number>
+        </property>
        </widget>
       </item>
       <item>
@@ -156,6 +162,9 @@ selection-background-color: lightgray;</string>
          <string notr="true">background: #3E3F40;
 color: #d0d0d0;
 selection-background-color: lightgray;</string>
+        </property>
+        <property name="maxVisibleItems">
+         <number>12</number>
         </property>
        </widget>
       </item>

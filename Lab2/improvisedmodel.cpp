@@ -6,13 +6,13 @@ void ImprovisedModel::addItem(Timer* timer){
 
     QListWidgetItem* item;
     if(timer->type() == Timer::alarm_t)
-        item = new QListWidgetItem(QIcon(":/res/Icons/AlarmIcon64.png"), timer->getName());
+        item = new QListWidgetItem(QIcon(":/res/Icons/AlarmIcon64.png"), timer->getName(), _widget);
     else
-        item = new QListWidgetItem(QIcon(":/res/Icons/TimerIcon64.png"), timer->getName());
-    item->setBackground(Qt::gray);
+        item = new QListWidgetItem(QIcon(":/res/Icons/TimerIcon64.png"), timer->getName(), _widget);
+    item->setBackground(QColor("#3E3F40"));
     item->setForeground(QColor("#FFA500"));
     item->setFont(QFont("Helvetica", 16));
-    _widget->addItem(item);
+    item->setHidden(_current_t!=Timer::other_t && timer->type()!=_current_t);
 
     _list->append(timer);
     connect(timer, SIGNAL(timeout(Timer*)), this, SIGNAL(timeout(Timer*)));
@@ -32,6 +32,7 @@ void ImprovisedModel::removeItem(Timer* timer){
 
 void ImprovisedModel::shownItems(Timer::TimerType type){
     int j = 0;
+    _current_t = type;
     for(auto i = _list->begin(); i!=_list->end(); i++, j++)
         _widget->item(j)->setHidden(type!=Timer::other_t && (*i)->type()!=type);
 }
@@ -69,6 +70,7 @@ void ImprovisedModel::load(){
         QString name, note, type, time, repeated;
         int msec;
         QDateTime date_time;
+        QTime temp;
         QTextStream in(&qfile);
         while(!in.atEnd()){
             name = in.readLine();
@@ -82,7 +84,8 @@ void ImprovisedModel::load(){
             }
             else{
                 date_time = QDateTime::currentDateTime();
-                date_time.setTime(QTime().addMSecs(msec));
+                temp = QTime(0,0);
+                date_time.setTime(temp.addMSecs(msec));
                 if(date_time<=QDateTime::currentDateTime()) date_time = date_time.addDays(1);
                 addItem(new AlarmClock(name, note, date_time, repeated.toInt()));
             }

@@ -10,6 +10,8 @@
 
 /**
  * Class which acts as model between QListWidget and QList of Timers.
+ *
+ * Stores timers in QList and 
  */
 class ImprovisedModel: public QObject{
     Q_OBJECT
@@ -86,7 +88,10 @@ signals:
      */
     void timeout(Timer*);
 private:
+    Timer::TimerType _current_t = Timer::other_t;
+
     QListWidget* _widget;
+
     QList<Timer*>* _list;
 };
 
