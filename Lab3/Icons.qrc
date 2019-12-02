@@ -1,2 +1,6 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/ico">
+        <file>play-icon.png</file>
+        <file>pause-icon.png</file>
+    </qresource>
+</RCC>
