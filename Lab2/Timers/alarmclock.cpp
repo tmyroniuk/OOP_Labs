@@ -23,8 +23,7 @@ QString AlarmClock::displayedString(){
     return _timeout_date.time().toString("hh:mm:ss");
 }
 
-int AlarmClock::asNum(){
-    qDebug()<<_timeout_date.time().msecsSinceStartOfDay();
+qint64 AlarmClock::asNum(){
     return _timeout_date.time().msecsSinceStartOfDay();
 }
 

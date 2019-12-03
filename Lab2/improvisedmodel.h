@@ -11,7 +11,7 @@
 /**
  * Class which acts as model between QListWidget and QList of Timers.
  *
- * Stores timers in QList and 
+ * Stores timers in QList and
  */
 class ImprovisedModel: public QObject{
     Q_OBJECT

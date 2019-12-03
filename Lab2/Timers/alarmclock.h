@@ -37,7 +37,7 @@ public:
      */
     bool repeated() override;
 
-    int asNum() override;
+    qint64 asNum() override;
 
 protected slots:
     /**

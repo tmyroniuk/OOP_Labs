@@ -1,5 +1,7 @@
 #include "improvisedmodel.h"
 
+#include <QtDebug>
+
 ImprovisedModel::ImprovisedModel(QListWidget *widget): _widget(widget), _list(new QList<Timer*>) {}
 
 void ImprovisedModel::addItem(Timer* timer){
@@ -68,7 +70,7 @@ void ImprovisedModel::load(){
     QFile qfile("save.txt");
     if (qfile.open(QIODevice::ReadOnly)) {
         QString name, note, type, time, repeated;
-        int msec;
+        qint64 msec;
         QDateTime date_time;
         QTime temp;
         QTextStream in(&qfile);
@@ -78,14 +80,18 @@ void ImprovisedModel::load(){
             type = in.readLine();
             time = in.readLine();
             repeated = in.readLine();
-            msec = time.toInt();
+            msec = time.toLongLong();
             if(type.toInt()==Timer::timer_t){
-                addItem(new TimerClock(name, note, std::chrono::milliseconds(msec)));
+                date_time.setMSecsSinceEpoch(msec);
+                if(QDateTime::currentDateTime()<date_time){
+                    msec = QDateTime::currentDateTime().msecsTo(date_time);
+                    addItem(new TimerClock(name, note, std::chrono::milliseconds(msec)));
+                }
             }
             else{
                 date_time = QDateTime::currentDateTime();
                 temp = QTime(0,0);
-                date_time.setTime(temp.addMSecs(msec));
+                date_time.setTime(temp.addMSecs(int(msec)));
                 if(date_time<=QDateTime::currentDateTime()) date_time = date_time.addDays(1);
                 addItem(new AlarmClock(name, note, date_time, repeated.toInt()));
             }

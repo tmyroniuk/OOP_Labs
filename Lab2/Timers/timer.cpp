@@ -49,8 +49,10 @@ QString Timer::displayedString(){
     return res;
 }
 
-int Timer::asNum(){
-    return _timer->remainingTime();
+qint64 Timer::asNum(){
+    auto temp = QDateTime::currentDateTime();
+    temp = temp.addMSecs(_timer->remainingTime());
+    return temp.toMSecsSinceEpoch();
 }
 
 void Timer::onTimeout(){
